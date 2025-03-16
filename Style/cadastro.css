@@ -1,0 +1,333 @@
+.cabecalho-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.4em;
+}
+
+.logo__img-cadastro{
+    display: block;
+}
+
+.principal__banner-cadastro{
+    display: flex;
+    flex-direction: column;
+    padding: 8em 0 0 0.8em;
+    display: block;
+}
+
+.banner__descricao{
+    display: block;
+}
+
+.banner__titulo{
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.banner__texto{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.banner__titulo, .banner__texto{
+    margin: 0;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 1.1em 0 0 0.8em;
+    gap: 0.7em;
+}
+
+.formulario__descricao,.logo__img-cadastro-desktop, .logo__img-cadastro-desktop-descricao, .logo__img-cadastro-tablet{
+    display: none;
+}
+
+.formulario__texto{
+    font-weight: 300;
+    font-size: 13px;
+
+}
+
+.formulario__input-nome-sobrenome{
+    display: flex;
+    gap: 1em;
+}
+
+.formulario__nome-usuario{
+  display: flex;
+  gap: 1em;
+}
+
+.nomeEsobrenome-cadastro{
+    background-color: var(--branco-gelo);
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="claro"]
+.nomeEsobrenome-cadastro{
+    background-color: #ffffff;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data__nascimento{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background: url("../assets/seta.svg") no-repeat right 10px center;
+    background-color: var(--branco-gelo);
+}
+
+[data-theme="claro"]
+.data__nascimento{
+    background-color: #ffffff;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario__input-email-senha{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+
+.senha-cadastro{
+    background: url("../assets/olho_fechado.svg") no-repeat right 10px center;
+    background-color: var(--branco-gelo);
+}
+
+.formulario__emailEsenha{
+    width: 377px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--branco-gelo);
+    border: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="claro"]
+.formulario__emailEsenha{
+    background-color: #ffffff;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nomeEsobrenome-cadastro::placeholder, .data__nascimento::placeholder, .formulario__emailEsenha::placeholder{
+    font-weight: 300;
+    font-size: 15px;
+    padding-left: 0.5em;
+}
+
+.botao__cadastrar{
+    display: flex;
+    padding: 1em 0 0.3em 3em;
+}
+
+.formulario__botao-cadastrar{
+    width: 293px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    font-weight: 300;
+    font-size: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="claro"]
+.formulario__botao-cadastrar{
+   color: #ffffff;
+}
+
+.formulario__botao-cadastrar:active{
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+.barra-cadastro{
+    transform: scale(0.8);
+    padding-right: 1.8em;
+}
+
+.cadastro__alternativo{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin-right: 2em;
+}
+
+.cadastro__entrar-texto{
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--cinza-claro);
+    text-align: center;
+    padding-right: 2em;
+}
+
+.cadastro__link-entrar{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--cor-secundaria);
+    padding-left: 1em;
+}
+
+@media screen and (min-width:1024px){
+
+.logo__img-cadastro, .logo__img-cadastro-desktop, .formulario__descricao, .logo__img-cadastro-desktop-descricao{
+    display: none;
+}
+
+.logo__img-cadastro-tablet{
+    display: block;
+}
+
+.principal__banner-cadastro{
+    display: flex;
+    flex-direction: row;
+    margin: 0 19%;
+}
+
+.banner__descricao{
+    display: block;
+}
+
+.banner__titulo{
+    font-size: 40px;
+}
+
+.banner__texto{
+    font-size: 20px ;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.nomeEsobrenome-cadastro{
+    width: 300px;
+}
+
+.data__nascimento{
+    width: 200px ;
+}
+
+.formulario__emailEsenha{
+    width: 620px;
+}
+
+.botao__cadastrar{
+    margin-right:3em;
+}
+
+.formulario__botao-cadastrar{
+    width: 400px;
+    font-size: 18px;
+}
+
+.barra-cadastro{
+    transform: scale(1.2);
+    margin-left: 2em;
+}
+
+.cadastro__alternativo{
+    margin-left: 2em;
+}
+
+.cadastro__entrar-texto, .cadastro__link-entrar{
+    font-size: 18px;
+}
+
+.cadastro__entrar-texto{
+    padding-right: 1em;
+}
+
+.cadastro__link-entrar{
+    padding-left: 0.3em;
+}
+
+}
+
+@media screen and (min-width: 1728px){
+
+.principal__cadastro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.banner__descricao, .logo__img-cadastro-tablet{
+    display: none;
+}
+
+.formulario__descricao{
+    display: block;
+    font-size: 40px;
+    padding-bottom: 1em;
+}
+
+.banner__img-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo__img-cadastro-desktop{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    padding-bottom: 1em;
+}
+
+.logo__img-cadastro-desktop-descricao{
+    display: block;
+    font-size: 70px;
+    font-weight: 700;
+    font-family: var(--fonte-secundaria);
+    margin-top: 0;
+}
+
+.formulario{
+    margin-bottom: 9%;
+}
+
+.formulario__texto{
+    font-size: 18px;
+    padding-bottom: 1em;
+}
+
+.nomeEsobrenome-cadastro, .data__nascimento,.formulario__emailEsenha{
+    height: 50px;
+    margin-top: 0.7em;
+}
+
+.nomeEsobrenome-cadastro::placeholder, .data__nascimento::placeholder, .formulario__emailEsenha::placeholder{
+    font-size: 20px;
+    padding-left: 0.7em;
+}
+
+.formulario__botao-cadastrar{
+    height: 50px;
+    width: 500px;
+}
+
+.barra-cadastro{
+    transform: scale(1.5);
+}
+
+html, body{
+    overflow: hidden;
+}
+
+}
+

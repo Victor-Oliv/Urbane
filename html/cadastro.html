@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Style/cadastro.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Cadastro</title>
+  </head>
+  <body data-theme = "escuro">
+    <header class="cabecalho-cadastro">
+      <div class="logo">
+        <img class="logo__img-cadastro" src="../assets/logo cadastro.png" alt="logo" />
+      </div>
+    </header>
+    <main class="principal__cadastro">
+    <div class="principal__banner-cadastro">
+      <div class="banner__descricao">
+      <h1 class="banner__titulo">Criar uma nova conta</h1>
+      <p class="banner__texto">Junte-se a nossa comunidade</p>
+      </div>
+      <div class="banner__img-logo">
+        <img class="logo__img-cadastro-tablet" src="../assets/logo cadastro tablet.png" alt="logo da stimme">
+        <img class="logo__img-cadastro-desktop" src="../assets/logo desktop.png" alt="logo da stimme">
+        <h3 class="logo__img-cadastro-desktop-descricao">STIMME</h2>
+      </div>
+    </div>
+   <form class="formulario">
+      <h2 class="formulario__descricao">Cadastro</h2>
+    <div class="formulario__nome-usuario">
+      <div>
+          <label class="formulario__texto"
+          >Nome e usuario:
+        <div>
+          <input
+            type="text"
+            class="nomeEsobrenome-cadastro"
+            placeholder="Nome"
+            id="nome-cadastro"
+          />
+          </label>
+        </div>
+      </div>
+
+      <div>
+          <label class="formulario__texto"> Usuario:
+        <div>
+          <input
+            type="text"
+            class="nomeEsobrenome-cadastro"
+            placeholder="@usuario"
+            id="usuario"
+          />
+        </div>
+          </label>
+      </div>
+    </div>
+      <label class="formulario__texto" for="dia-cadastro"
+        >Data de nascimento:
+        <div>
+          <input
+            type="number"
+            class="data__nascimento"
+            placeholder="Dia"
+            id="dia-cadastro"
+          />
+          <input
+            type="number"
+            class="data__nascimento"
+            placeholder="Mês"
+            id="mes-cadastro"
+          />
+          <input
+            type="number"
+            class="data__nascimento"
+            placeholder="Ano"
+            id="ano-cadastro"
+          />
+        </div>
+      </label>
+      <label class="formulario__texto" for="email-cadastro"
+        >E-mail e senha:
+        <div class="formulario__input-email-senha">
+          <input
+            type="email"
+            class="formulario__emailEsenha"
+            placeholder="Digite seu e-mail"
+            id="email-cadastro"
+          />
+          <input
+            type="password"
+            class="formulario__emailEsenha senha-cadastro"
+            placeholder="Digite uma senha"
+            id="senha-cadastro"
+          />
+        </div>
+      </label>
+      <div class="botao__cadastrar">
+        <button class="formulario__botao-cadastrar">Cadastre-se</button>
+      </div>
+      <img class="barra-cadastro" src="../assets/barra.svg" alt="barra">
+      <div class="cadastro__alternativo">
+        <button class="botao__google"><img class="icones-img" src="../assets/icon_google 1.svg" alt="icone google"></button>
+        <button class="botao__apple"><img class="icones-img" src="../assets/icon_apple 1.svg" alt="icone apple"></button>
+      </div>
+      <span class="cadastro__entrar-texto">
+        Já tem uma conta?
+        <a href="../index.html" class="cadastro__link-entrar">Entrar</a>
+      </span>
+    </form>
+    </main>
+  </body>
+  <script src="../js/modo-claro-escuro.js"></script>
+</html>

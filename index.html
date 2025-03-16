@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stimme</title>
+  </head>
+  <body data-theme = "escuro">
+    <header class="cabecalho-login">
+    <label class="interruptor">
+      <input type="checkbox" id="alternar-tema">
+      <span class="deslizante"></span>
+    </header>
+  </label>
+    <main class="principal">
+      <div class="principal__logo">
+        <img class="principal__img-logo-desktop" src="assets/logo desktop.png" alt="logo stimme">
+        <img class="principal__img-logo" src="assets/logo.png" alt="Logo da Rede Social" />
+        <h1 class="principal__titulo">STIMME</h1>
+      </div>
+        <form class="login__formulario">
+          <p class="login__formulario-texto">Login</p>
+          <div>
+            <p class="login__texto">Nome de usuario:</p>
+            <input
+              class="login__input"
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu usuario"
+            />
+          </div>
+          <div>
+            <p class="login__texto">Senha:</p>
+            <input
+              class="login__input login_input-senha"
+              type="password"
+              name="Senha"
+              id="Senha"
+              placeholder="Digite sua senha"
+            />
+          </div>
+          <div class="login__formulario-LembrareEsqueciSenha">
+            <input class="input__lembrarsenha" type="checkbox" id="lembrar_senha" />
+            <span class="input__texto-lembrar-senha">Lembrar senha</span>
+            <a href="#" class="login__formulario-esqueci-a-senha"
+              >Esqueci a senha</a
+            >
+          </div>
+          <button class="login__formulario-btnEntrar">Entrar</button>
+          <img class="img__barra-login" src="assets/barra.svg" alt="barra">
+          <div class="login__Alternativo">
+            <button class=" botao__google"><img class="icones-img" src="assets/icon_google 1.svg" alt="icone google"></button>
+            <button class="botao__apple"><img class="icones-img" src="assets/icon_apple 1.svg" alt="icone apple"></button>
+          </div>
+          <p class="login__formulario-cadastrar">
+            Não tem uma conta?
+            <a href="html/cadastro.html" class="login__formulario-cadastrar-link">Registre-se</a>
+          </p>
+        </form>
+    </main>
+    <script src="js/modo-claro-escuro.js"></script>
+  </body>
+</html>
