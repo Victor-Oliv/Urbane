@@ -1,12 +1,40 @@
+.formulario__descricao,.banner-logo,.logo__texto-dois {
+    display: none;
+}
+
 .cabecalho-cadastro {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 0.4em;
+    position: relative;
 }
 
-.logo__img-cadastro{
+.logo{
     display: block;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo__titulo{
+    margin-top: -3px;
+    font-family: var(--fonte-terciaria);
+    font-size: 30px;
+}
+.logo__texto{
+    font-family: var(--fonte-secundaria);
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-top: -42px;
+}
+
+.botao__ligth{
+    display: flex;
+    padding-left: 20em;
+    position: absolute;
 }
 
 .principal__banner-cadastro{
@@ -41,14 +69,10 @@
     gap: 0.7em;
 }
 
-.formulario__descricao,.logo__img-cadastro-desktop, .logo__img-cadastro-desktop-descricao, .logo__img-cadastro-tablet{
-    display: none;
-}
 
 .formulario__texto{
     font-weight: 300;
     font-size: 13px;
-
 }
 
 .formulario__input-nome-sobrenome{
@@ -181,12 +205,8 @@
 
 @media screen and (min-width:1024px){
 
-.logo__img-cadastro, .logo__img-cadastro-desktop, .formulario__descricao, .logo__img-cadastro-desktop-descricao{
+.logo,.logo__texto-dois, .formulario__descricao, .logo__img-cadastro-desktop-descricao{
     display: none;
-}
-
-.logo__img-cadastro-tablet{
-    display: block;
 }
 
 .principal__banner-cadastro{
@@ -197,6 +217,30 @@
 
 .banner__descricao{
     display: block;
+}
+
+.banner-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo__titulo{
+    font-family: var(--fonte-terciaria);
+    font-size: 55px;
+}
+.logo__texto{
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-top: -70px;
+}
+
+.botao__ligth{
+    display: flex;
+    position: absolute;
+    margin-top: 45px;
+    padding-left: 55em;
 }
 
 .banner__titulo{
@@ -212,18 +256,19 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
+    margin-top: 2em;
 }
 
 .nomeEsobrenome-cadastro{
-    width: 300px;
+    width: 270px;
 }
 
 .data__nascimento{
-    width: 200px ;
+    width: 183px ;
 }
 
 .formulario__emailEsenha{
-    width: 620px;
+    width: 570px;
 }
 
 .botao__cadastrar{
@@ -259,6 +304,14 @@
 }
 
 @media screen and (min-width: 1728px){
+ 
+.banner__descricao{
+    display: none;
+}
+
+.logo__texto-dois{
+    display: block;
+}
 
 .principal__cadastro{
     display: grid;
@@ -266,39 +319,44 @@
     height: 100vh;
 }
 
-.banner__descricao, .logo__img-cadastro-tablet{
-    display: none;
+.botao__ligth{
+    display: flex;
+    position: absolute;
+    margin-top: 40px;
+    padding-left: 113em;
+}
+
+.banner-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -300px;
+}
+
+.logo__titulo{
+    font-family: var(--fonte-terciaria);
+    font-size: 120px;
+}
+
+.logo__texto{
+    font-family: var(--fonte-secundaria);
+    font-size: 40px;
+    letter-spacing: 20px;
+    margin-top: -170px;
+}
+
+.logo__texto-dois{
+    font-size: 28px;
+    font-weight: 200;
 }
 
 .formulario__descricao{
     display: block;
     font-size: 40px;
-    padding-bottom: 1em;
-}
-
-.banner__img-logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo__img-cadastro-desktop{
-    display: flex;
-    justify-content: center;
-    margin-top: 15%;
-    padding-bottom: 1em;
-}
-
-.logo__img-cadastro-desktop-descricao{
-    display: block;
-    font-size: 70px;
-    font-weight: 700;
-    font-family: var(--fonte-secundaria);
-    margin-top: 0;
 }
 
 .formulario{
-    margin-bottom: 9%;
+    margin-bottom: 10%;
 }
 
 .formulario__texto{
