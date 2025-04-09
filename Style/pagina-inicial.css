@@ -10,6 +10,7 @@
   
   main {
     padding-top: 70px;
+    padding-bottom: 70px;
   }
   
   .cabecalho__feed {
@@ -111,3 +112,51 @@
     cursor: pointer;
   }
   
+  .img__banner{
+    padding-bottom: 1em;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.8em;
+    margin-bottom: 2em;
+  }
+
+  .card__texto{
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 2em;
+    text-align: center;
+  }
+
+  .card__descricao{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--fonte-secundaria);
+    padding-bottom: 0.3em;
+  }
+
+  .card__descricao-preco{
+    display: flex;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 14px;
+    gap: 1em;
+  }
+
+  .preco__antigo {
+    text-decoration: line-through;
+    color: var(--cinza-claro);
+    font-size: 0.9rem;
+  }
+
+  .card__descricao-texto{
+    font-family: var(--fonte-secundaria);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--cinza-claro);
+  }
+

@@ -1,0 +1,46 @@
+.categoria-swiper {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 2rem;
+}
+
+.categoria-swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.categoria-swiper .swiper-slide {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botao-categoria {
+  font-family: var(--fonte-secundaria);
+  font-weight: 500;
+  padding: 1rem 2rem;
+  min-width: 290px;
+  min-height: 60px;
+  background-color: var(--cinza-claro);
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  color: var(--branco);
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.swiper-pagination {
+  position: static;
+  display: flex !important;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+
+
+  
