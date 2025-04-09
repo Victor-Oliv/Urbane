@@ -3,6 +3,12 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 70px;
 }
 
 .cabecalho__menu-hamburguer {
@@ -77,8 +83,27 @@
   font-weight: 500;
 }
 
+
 #tema-escuro,
 #tema-claro {
   color: var(--cinza-claro);
   font-weight: 500;
 }
+
+.logo__cabecalho{
+    transform: scale(1.2);
+    align-items: center;
+    margin-top: -1.5em;
+    margin-left: 1.3em;
+}
+
+.cabecalho__feed-navegacao{
+    display: flex;
+    margin-right: 0.9em;
+    gap: 0.8em;
+}
+
+.itens__navegacao{
+    cursor: pointer;
+}
+
