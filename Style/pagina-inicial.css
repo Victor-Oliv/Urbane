@@ -1,60 +1,58 @@
-.cabecalho__feed{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+.cabecalho__feed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.cabecalho__menu-hamburguer{
-    width: 24px;
-    height: 24px;
-    background-image: url("../assets/menu\ 1.svg");
-    display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
+.cabecalho__menu-hamburguer {
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/menu\ 1.svg");
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 
 .container__menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.container__imagem{
-    padding: 0.6em;
+.container__imagem {
+  padding: 0.6em;
 }
 
-
-.container__botao{
-    display: none;  
+.container__botao {
+  display: none;
 }
 
-.container__botao:checked ~ .lista-menu{
-    display: block;
+.container__botao:checked ~ .lista-menu {
+  display: block;
 }
 
-.lista-menu{
-    display: none;
-    position: absolute;
-    top: 100%;
-    width: 60vw;
-    list-style: none;
-    font-weight: bold;
+.lista-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 60vw;
+  list-style: none;
+  font-weight: bold;
 }
 
-.lista-menu__titulo{
-    color: var(--branco);
-    font-weight: 500;
-    font-family: var(--fonte-secundaria);
-    font-weight: bold;
-    padding: 10px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 15px;
+.lista-menu__titulo {
+  color: var(--branco);
+  font-weight: 500;
+  font-family: var(--fonte-secundaria);
+  font-weight: bold;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 15px;
 }
 
 .lista-menu__titulo:first-child {
-    border-top: none;
-    margin-top: 0;
+  border-top: none;
+  margin-top: 0;
 }
 
 .lista-menu__item {
@@ -67,24 +65,20 @@
   color: white;
 }
 
-.lista-menu__titulo, .lista-menu__item{
-    padding: 1em;
-    background-color: var(--cor-principal);
+.lista-menu__titulo,
+.lista-menu__item {
+  padding: 1em;
+  background-color: var(--cor-principal);
 }
 
-.lista-menu__link{
-    color: var(--cinza-claro);
-    text-decoration: none;
-    font-weight:500;
-    
+.lista-menu__link {
+  color: var(--cinza-claro);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-#tema-escuro,#tema-claro {
-    color: var(--cinza-claro);
-    font-weight: 500;
+#tema-escuro,
+#tema-claro {
+  color: var(--cinza-claro);
+  font-weight: 500;
 }
-
-
-
-
-

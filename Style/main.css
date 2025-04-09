@@ -1,348 +1,348 @@
 .cabecalho-login {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
 }
 
 .interruptor {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
 }
 
 .interruptor input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .deslizante {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 25px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
 }
 
 .deslizante:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 2.5px;
-    background-color: var(--branco);
-    transition: 0.4s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: var(--branco);
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 input:checked + .deslizante {
-    background-color: var(--cinza-claro);
+  background-color: var(--cinza-claro);
 }
 
 input:checked + .deslizante:before {
-    transform: translateX(24px);
+  transform: translateX(24px);
 }
 
 .principal {
-    display: flex;
-    flex-direction: column;
- }
-    
-.principal__logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3.5em 0 ;
-    gap: 0.5em;
+  display: flex;
+  flex-direction: column;
 }
 
-.principal__titulo{
-    font-size: 50px;
-    font-weight: 700;
-    font-family: var(--fonte-terciaria);
-    padding-bottom: 0;
+.principal__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.5em 0;
+  gap: 0.5em;
 }
 
-.principal__texto{
-    font-size: 15px;
-    font-family: var(--fonte-secundaria);
-    letter-spacing: 10px;
+.principal__titulo {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: var(--fonte-terciaria);
+  padding-bottom: 0;
 }
 
-.login__formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 3em;
-    gap: 1em;
+.principal__texto {
+  font-size: 15px;
+  font-family: var(--fonte-secundaria);
+  letter-spacing: 10px;
 }
 
-.login__formulario-texto, .principal__texto-dois{
-    display: none;
+.login__formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3em;
+  gap: 1em;
 }
 
-.login__texto{
-    font-size: 16px;
-    padding-bottom: 16px;
+.login__formulario-texto,
+.principal__texto-dois {
+  display: none;
 }
 
-.login__input{
-    width: 320px;
-    height: 42px;
-    border-radius: 16px;
-    border: none;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
-    background-color: var(--branco-gelo);
+.login__texto {
+  font-size: 16px;
+  padding-bottom: 16px;
 }
 
-[data-theme="claro"]
-.login__input{
-    background-color: #ffffff;
-    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+.login__input {
+  width: 320px;
+  height: 42px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: var(--branco-gelo);
 }
 
-.login_input-senha{
-    background: url("../assets/olho_fechado.svg") no-repeat right 10px center;
-    background-color: var(--branco-gelo);
+[data-theme="claro"] .login__input {
+  background-color: #ffffff;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-
-.login__input::placeholder{
-    font-size: 16px;
-    padding-left: 8px;
-    color: var(--cinza-escuro);
+.login_input-senha {
+  background: url("../assets/olho_fechado.svg") no-repeat right 10px center;
+  background-color: var(--branco-gelo);
 }
 
-.input__lembrarsenha{
-    width: 16px;
-    height: 16px;
-    border-radius: 10px;
-    background-color: var(--cinza-claro);
-    transform: translateY(15%);
+.login__input::placeholder {
+  font-size: 16px;
+  padding-left: 8px;
+  color: var(--cinza-escuro);
 }
 
-.input__texto-lembrar-senha{
-    font-size: 13px;
-    color: var(--cinza-claro);
+.input__lembrarsenha {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background-color: var(--cinza-claro);
+  transform: translateY(15%);
 }
 
-.login__formulario-esqueci-a-senha{
-    font-weight: 700;
-    font-size: 13px;
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    padding-left: 5em;
+.input__texto-lembrar-senha {
+  font-size: 13px;
+  color: var(--cinza-claro);
 }
 
-.login__formulario-btnEntrar{
-    width: 293px;
-    height: 40px;
-    border-radius: 16px;
-    background-color: var(--cinza-escuro);
-    border: none;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    color: var(--branco);
-    font-size: 1rem;
+.login__formulario-esqueci-a-senha {
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  padding-left: 5em;
 }
 
-[data-theme="claro"]
-.login__formulario-btnEntrar{
-    color: #ffffff;
+.login__formulario-btnEntrar {
+  width: 293px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: var(--cinza-escuro);
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  color: var(--branco);
+  font-size: 1rem;
 }
 
-.login__formulario-btnEntrar:active{
-    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transform: translateY(2px);
+[data-theme="claro"] .login__formulario-btnEntrar {
+  color: #ffffff;
 }
 
-.login__Alternativo{
-    display: flex;
-    gap: 2em;
+.login__formulario-btnEntrar:active {
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
 }
 
-.botao__apple, .botao__google {
-    width: 112px;
-    height: 46px;
-    border-radius: 8px;
-    border: 1px solid var(--cinza-claro);
-    background-color: transparent;
+.login__Alternativo {
+  display: flex;
+  gap: 2em;
 }
 
-[data-theme="claro"]
-.botao__apple{
-    filter: invert(80%);
+.botao__apple,
+.botao__google {
+  width: 112px;
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid var(--cinza-claro);
+  background-color: transparent;
 }
 
-.botao__google:active, .botao__apple:active{
-    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transform: translateY(2px);
+[data-theme="claro"] .botao__apple {
+  filter: invert(80%);
 }
 
-.icones-img{
-    transform: scale(0.9);
+.botao__google:active,
+.botao__apple:active {
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
 }
 
-.login__formulario-cadastrar{
-    display: flex;
-    font-size: 13px;
-    color: var(--cinza-claro);
-    gap: 2em;
-    margin-right: 0.5em;
+.icones-img {
+  transform: scale(0.9);
 }
 
-.login__formulario-cadastrar-link{
-    font-size:13px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--cor-secundaria);
+.login__formulario-cadastrar {
+  display: flex;
+  font-size: 13px;
+  color: var(--cinza-claro);
+  gap: 2em;
+  margin-right: 0.5em;
 }
 
-@media screen and (min-width:1024px){
+.login__formulario-cadastrar-link {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+}
 
-.login__formulario-texto{
+@media screen and (min-width: 1024px) {
+  .login__formulario-texto {
     display: block;
     font-size: 27px;
     padding-bottom: 1em;
-}
+  }
 
-.principal__titulo{
+  .principal__titulo {
     font-size: 45px;
-}
+  }
 
-.principal__logo{
+  .principal__logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-.principal__titulo{
+  .principal__titulo {
     font-size: 75px;
     font-weight: 700;
     font-family: var(--fonte-terciaria);
     padding-bottom: 0;
-}
+  }
 
-.principal__texto{
+  .principal__texto {
     font-size: 30px;
     font-family: var(--fonte-secundaria);
     letter-spacing: 10px;
-}
+  }
 
-.principal__img-logo-desktop, .principal__texto-dois{
+  .principal__img-logo-desktop,
+  .principal__texto-dois {
     display: none;
-}
+  }
 
-.login__input{
+  .login__input {
     width: 370px;
-}
+  }
 
-.login__formulario-btnEntrar{
+  .login__formulario-btnEntrar {
     width: 315px;
-}
+  }
 }
 
-@media screen and (min-width:1728px){
-
-.principal__texto-dois{
+@media screen and (min-width: 1728px) {
+  .principal__texto-dois {
     display: block;
-}
+  }
 
-.principal{
+  .principal {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     width: 100%;
-}
+  }
 
-.principal__logo{
+  .principal__logo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: -100px;
-}
+  }
 
-.principal__titulo{
+  .principal__titulo {
     font-family: var(--fonte-terciaria);
     font-size: 120px;
-}
+  }
 
-.principal__texto{
+  .principal__texto {
     font-family: var(--fonte-secundaria);
     font-size: 40px;
     letter-spacing: 20px;
-}
+  }
 
-.principal__texto-dois{
+  .principal__texto-dois {
     font-size: 28px;
     font-weight: 200;
-}
+  }
 
-.login__formulario{
+  .login__formulario {
     display: flex;
     justify-content: center;
     padding-bottom: 10em;
-}
+  }
 
-.login__formulario-texto{
+  .login__formulario-texto {
     padding-bottom: 2em;
     font-size: 40px;
-}
+  }
 
-.login__texto{
+  .login__texto {
     font-size: 18px;
-}
+  }
 
-.login__input{
+  .login__input {
     width: 420px;
     height: 50px;
-}
+  }
 
-.login__input::placeholder{
+  .login__input::placeholder {
     font-size: 20px;
     padding-left: 0.7em;
-}
+  }
 
-.login__formulario-btnEntrar{
+  .login__formulario-btnEntrar {
     width: 370px;
     height: 50px;
     font-size: 23px;
     margin: 0.7em 0;
-}
+  }
 
-.input__texto-lembrar-senha, .login__formulario-esqueci-a-senha{
+  .input__texto-lembrar-senha,
+  .login__formulario-esqueci-a-senha {
     font-size: 18px;
-}
+  }
 
-.img__barra-login{
+  .img__barra-login {
     transform: scale(1.3);
-}
+  }
 
-.botao__google, .botao__apple{
+  .botao__google,
+  .botao__apple {
     width: 150px;
-}
+  }
 
-.login__formulario-cadastrar, .login__formulario-cadastrar-link{
+  .login__formulario-cadastrar,
+  .login__formulario-cadastrar-link {
     font-size: 16px;
-}
+  }
 
-.login__formulario-cadastrar{
-   gap: 1em;
-}
+  .login__formulario-cadastrar {
+    gap: 1em;
+  }
 
-.principal__img-logo-desktop{
+  .principal__img-logo-desktop {
     display: block;
-}
+  }
 
-html, body{
+  html,
+  body {
     overflow: hidden;
-}
-
-
+  }
 }
