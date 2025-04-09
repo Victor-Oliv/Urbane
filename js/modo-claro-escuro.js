@@ -22,15 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    botaoClaro.addEventListener("click", function () {
-        body.setAttribute("data-theme", "claro");
-        localStorage.setItem("tema", "claro");
-        if (botaoAlternar) botaoAlternar.checked = true;
-    });
+    if (botaoClaro) {
+        botaoClaro.addEventListener("click", function () {
+            body.setAttribute("data-theme", "claro");
+            localStorage.setItem("tema", "claro");
+            if (botaoAlternar) botaoAlternar.checked = true;
+        });
+    }
 
-    botaoEscuro.addEventListener("click", function () {
-        body.setAttribute("data-theme", "escuro");
-        localStorage.setItem("tema", "escuro");
-        if (botaoAlternar) botaoAlternar.checked = false;
-    });
+    if (botaoEscuro) {
+        botaoEscuro.addEventListener("click", function () {
+            body.setAttribute("data-theme", "escuro");
+            localStorage.setItem("tema", "escuro");
+            if (botaoAlternar) botaoAlternar.checked = false;
+        });
+    }
 });
