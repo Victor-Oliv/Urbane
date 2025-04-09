@@ -9,26 +9,26 @@
   </head>
   <body>
     <header class="cabecalho__feed">
-      <nav class="feed__navegacao">
-        <ul class="feed__navegacao-lista">
-          <li class="navegacao__lista-iten">
-            <img src="../assets/menu 1.svg" alt="Menu" />
-          </li>
-          <li class="navegacao__lista-iten">
-            <img src="../assets/logo cadastro.png" alt="logo" />
-          </li>
-          <li class="navegacao__lista-iten">
-            <a href="#"><img src="../assets/perfil.svg" alt="perfil" /></a>
-          </li>
+      <div class="container__menu">
+        <input type="checkbox" id="menu"  class="container__botao">
+        <label for="menu" class="container__rotulo">
+            <span class="cabecalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+            <li class="lista-menu__titulo">Vestúario</li>
+            <li class="lista-menu__item"> <a href="#" class="lista-menu__link">Camisetas</a>
+            </li>
+            <li class="lista-menu__item"> <a href="#" class="lista-menu__link">Calças</a>
+            </li>
+            <li class="lista-menu__item"> <a href="#" class="lista-menu__link">Moletons</a>
+            </li>
+            <li class="lista-menu__titulo">Dark Mode</li>
+            <li class="lista-menu__item" id="tema-escuro">Escuro</li>
+            <li class="lista-menu__item" id="tema-claro">Claro</li>
+            <li class="lista-menu__titulo" id="sair">Sair</li>
         </ul>
-      </nav>
+        </div>
     </header>
-    <main class="principal__feed">
-      <div class="banner__feed">
-        <p class="banner__feed-texto">Recentes</p>
-        <p class="banner__feed-texto">Lorem</p>
-      </div>
-    </main>
 
     <script src="../js/modo-claro-escuro.js"></script>
   </body>
