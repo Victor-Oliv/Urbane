@@ -341,8 +341,4 @@ input:checked + .deslizante:before {
     display: block;
   }
 
-  html,
-  body {
-    overflow: hidden;
-  }
 }
