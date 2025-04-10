@@ -173,7 +173,7 @@
   }
 
 
-  @media screen and (min-width:820px){
+  @media screen and (min-width: 820px){
     .card__texto{
       font-size: 22px;
       font-weight: 300;

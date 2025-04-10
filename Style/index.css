@@ -204,14 +204,14 @@ input:checked + .deslizante:before {
 }
 
 @media screen and (min-width: 820px) {
+  .login__formulario{
+    margin: 7rem;
+  }
+  
   .login__formulario-texto {
     display: block;
-    font-size: 27px;
+    font-size: 30px;
     padding-bottom: 1em;
-  }
-
-  .principal__titulo {
-    font-size: 45px;
   }
 
   .principal__logo {
