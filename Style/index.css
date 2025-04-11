@@ -80,7 +80,7 @@ input:checked + .deslizante:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3em;
+  padding-top: 6em;
   gap: 1em;
 }
 
@@ -204,10 +204,10 @@ input:checked + .deslizante:before {
 }
 
 @media screen and (min-width: 820px) {
-  .login__formulario{
-    margin: 7rem;
+  .login__formulario {
+    margin-top: -50px;
   }
-  
+
   .login__formulario-texto {
     display: block;
     font-size: 30px;
@@ -247,7 +247,7 @@ input:checked + .deslizante:before {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
   .principal__texto-dois {
     display: block;
   }
@@ -261,9 +261,10 @@ input:checked + .deslizante:before {
 
   .principal__logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: -100px;
+    height: 70%;
+    gap: 1rem;
   }
 
   .principal__titulo {
@@ -284,8 +285,10 @@ input:checked + .deslizante:before {
 
   .login__formulario {
     display: flex;
-    justify-content: center;
-    padding-bottom: 10em;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 10rem ;
   }
 
   .login__formulario-texto {
@@ -341,4 +344,11 @@ input:checked + .deslizante:before {
     display: block;
   }
 
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
 }
