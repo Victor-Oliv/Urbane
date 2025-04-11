@@ -173,9 +173,9 @@
   }
 
 
-  @media screen and (min-width: 820px){
+  @media (min-width: 820px) and (max-width: 1024px) {
     .card__texto{
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 300;
       padding-bottom: 1em;
     }
@@ -189,8 +189,30 @@
     }
   }
 
-  @media screen and (min-width:1500px){
+  @media (min-width: 1366px){
+    .logo__cabecalho {
+      height: 50px;
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      z-index: 1000;
+    }
 
+    .itens__navegacao{
+      display: flex;
+      transform: scale(1.3);
+      padding-right: 2.5em;
+    }
+    
+    .cabecalho__menu-hamburguer{
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  @media (min-width: 1441px){
     .logo__cabecalho {
       height: 50px;
       object-fit: contain;
@@ -212,6 +234,14 @@
       width: 35px;
     }
 
+    .card__texto{
+      font-size: 22px;
+      font-weight: 300;
+      padding-bottom: 1em;
+    }
+
   }
 
+  
+  
   

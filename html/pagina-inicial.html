@@ -58,8 +58,8 @@
 
       <section class="banner">
       <picture>
-        <source media="(min-width: 1728px)" srcset="../assets/banner-desktop.png">
-        <source media="(min-width: 1024px)" srcset="../assets/banner-tablet.png">
+        <source media="(min-width: 1400px)" srcset="../assets/banner-desktop.png">
+        <source media="(min-width: 600px)" srcset="../assets/banner-tablet.png">
       <img class="img__banner" src="../assets/img_1.png" alt="banner" />
       </picture>
        </section>
@@ -269,6 +269,7 @@
       function initSwipers() {
         const largura = window.innerWidth;
     
+        // Destroi os swipers anteriores
         if (categoriaSwiper) {
           categoriaSwiper.destroy(true, true);
           categoriaSwiper = null;
@@ -277,7 +278,8 @@
         cardsSwipers.forEach((swiper) => swiper.destroy(true, true));
         cardsSwipers = [];
     
-        if (largura < 1024) {
+        // Mobile (até 819px)
+        if (largura < 820) {
           categoriaSwiper = new Swiper(".categoria-swiper", {
             slidesPerView: "auto",
             centeredSlides: true,
@@ -299,8 +301,23 @@
             });
             cardsSwipers.push(swiper);
           });
-
-        } else if (largura >= 1024 && largura < 1728) {
+    
+        // Tablet (820px até 1023px)
+        } else if (largura >= 820 && largura < 1024) {
+          document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
+            const swiper = new Swiper(swiperEl, {
+              slidesPerView: 2,
+              spaceBetween: 12, // espaço um pouco menor
+              pagination: {
+                el: swiperEl.querySelector(".cards-pagination"),
+                clickable: true,
+              },
+            });
+            cardsSwipers.push(swiper);
+          });
+    
+        // Desktop (1024px até 1440px) - 3 cards
+        } else if (largura >= 1024 && largura <= 1440) {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
               slidesPerView: 3,
@@ -312,12 +329,27 @@
             });
             cardsSwipers.push(swiper);
           });
+    
+        // Telas grandes (>1440px) - 4 cards
         } else {
+          document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
+            const swiper = new Swiper(swiperEl, {
+              slidesPerView: 4,
+              spaceBetween: 20,
+              pagination: {
+                el: swiperEl.querySelector(".cards-pagination"),
+                clickable: true,
+              },
+            });
+            cardsSwipers.push(swiper);
+          });
         }
       }
+    
       window.addEventListener("load", initSwipers);
       window.addEventListener("resize", initSwipers);
     </script>
+    
     
   </body>
 </html>
