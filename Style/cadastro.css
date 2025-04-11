@@ -418,7 +418,8 @@
 
   .logo__titulo {
     font-family: var(--fonte-terciaria);
-    font-size: 110px;
+    font-size: 100px;
+    padding-bottom: 0.8rem;
   }
 
   .logo__texto {
