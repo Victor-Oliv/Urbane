@@ -351,3 +351,108 @@ input:checked + .deslizante:before {
     overflow: hidden;
   }
 }
+
+@media screen and (min-width: 1600px) {
+  .principal__texto-dois {
+    display: block;
+  }
+
+  .principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .principal__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    gap: 1rem;
+  }
+
+  .principal__titulo {
+    font-family: var(--fonte-terciaria);
+    font-size: 120px;
+  }
+
+  .principal__texto {
+    font-family: var(--fonte-secundaria);
+    font-size: 40px;
+    letter-spacing: 20px;
+  }
+
+  .principal__texto-dois {
+    font-size: 28px;
+    font-weight: 200;
+  }
+
+  .login__formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 10rem ;
+  }
+
+  .login__formulario-texto {
+    padding-bottom: 2em;
+    font-size: 40px;
+  }
+
+  .login__texto {
+    font-size: 18px;
+  }
+
+  .login__input {
+    width: 420px;
+    height: 50px;
+  }
+
+  .login__input::placeholder {
+    font-size: 20px;
+    padding-left: 0.7em;
+  }
+
+  .login__formulario-btnEntrar {
+    width: 370px;
+    height: 50px;
+    font-size: 23px;
+    margin: 0.7em 0;
+  }
+
+  .input__texto-lembrar-senha,
+  .login__formulario-esqueci-a-senha {
+    font-size: 18px;
+  }
+
+  .img__barra-login {
+    transform: scale(1.3);
+  }
+
+  .botao__google,
+  .botao__apple {
+    width: 150px;
+  }
+
+  .login__formulario-cadastrar,
+  .login__formulario-cadastrar-link {
+    font-size: 16px;
+  }
+
+  .login__formulario-cadastrar {
+    gap: 1em;
+  }
+
+  .principal__img-logo-desktop {
+    display: block;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+}
