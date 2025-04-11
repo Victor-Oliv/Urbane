@@ -269,7 +269,6 @@
       function initSwipers() {
         const largura = window.innerWidth;
     
-        // Destroi os swipers anteriores
         if (categoriaSwiper) {
           categoriaSwiper.destroy(true, true);
           categoriaSwiper = null;
@@ -278,7 +277,7 @@
         cardsSwipers.forEach((swiper) => swiper.destroy(true, true));
         cardsSwipers = [];
     
-        // Mobile (até 819px)
+        
         if (largura < 820) {
           categoriaSwiper = new Swiper(".categoria-swiper", {
             slidesPerView: "auto",
@@ -302,12 +301,12 @@
             cardsSwipers.push(swiper);
           });
     
-        // Tablet (820px até 1023px)
+      
         } else if (largura >= 820 && largura < 1024) {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
               slidesPerView: 2,
-              spaceBetween: 12, // espaço um pouco menor
+              spaceBetween: 12, 
               pagination: {
                 el: swiperEl.querySelector(".cards-pagination"),
                 clickable: true,
@@ -316,7 +315,6 @@
             cardsSwipers.push(swiper);
           });
     
-        // Desktop (1024px até 1440px) - 3 cards
         } else if (largura >= 1024 && largura <= 1440) {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
@@ -330,7 +328,7 @@
             cardsSwipers.push(swiper);
           });
     
-        // Telas grandes (>1440px) - 4 cards
+      
         } else {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {

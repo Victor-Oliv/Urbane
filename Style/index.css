@@ -349,6 +349,5 @@ input:checked + .deslizante:before {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
   }
 }
