@@ -247,7 +247,7 @@ input:checked + .deslizante:before {
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media  (min-width: 1366px) {
   .principal__texto-dois {
     display: block;
   }
@@ -352,7 +352,7 @@ input:checked + .deslizante:before {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media (min-width: 1768px) {
   .principal__texto-dois {
     display: block;
   }

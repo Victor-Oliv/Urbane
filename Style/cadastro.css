@@ -202,7 +202,7 @@
   padding-left: 1em;
 }
 
-@media screen and (min-width: 820px) {
+@media (min-width: 820px) {
   .logo,
   .logo__texto-dois,
   .formulario__descricao,
@@ -304,7 +304,7 @@
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media (min-width: 1366px) {
   .banner__descricao {
     display: none;
   }
@@ -322,53 +322,55 @@
   .botao__ligth {
     display: flex;
     position: absolute;
-    margin-top: 40px;
-    padding-left: 113em;
+    right: 1rem;
   }
 
   .banner-logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: -300px;
+    height: 50%;
+    gap: 1rem;
   }
 
   .logo__titulo {
     font-family: var(--fonte-terciaria);
-    font-size: 120px;
+    font-size: 110px;
   }
 
   .logo__texto {
     font-family: var(--fonte-secundaria);
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 20px;
     margin-top: -170px;
   }
 
   .logo__texto-dois {
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 200;
   }
 
   .formulario__descricao {
     display: block;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .formulario {
-    margin-bottom: 10%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
   }
 
   .formulario__texto {
-    font-size: 18px;
-    padding-bottom: 1em;
+    font-size: 16px;
   }
 
   .nomeEsobrenome-cadastro,
   .data__nascimento,
   .formulario__emailEsenha {
     height: 50px;
-    margin-top: 0.7em;
   }
 
   .nomeEsobrenome-cadastro::placeholder,
@@ -391,4 +393,5 @@
   body {
     overflow: hidden;
   }
+
 }
