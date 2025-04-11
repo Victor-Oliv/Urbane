@@ -356,11 +356,11 @@
   }
 
   .formulario {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    margin: 5rem 0;
   }
 
   .formulario__texto {
@@ -370,7 +370,7 @@
   .nomeEsobrenome-cadastro,
   .data__nascimento,
   .formulario__emailEsenha {
-    height: 50px;
+    height: 45px;
   }
 
   .nomeEsobrenome-cadastro::placeholder,
@@ -381,7 +381,7 @@
   }
 
   .formulario__botao-cadastrar {
-    height: 50px;
+    height: 45px;
     width: 500px;
   }
 
@@ -391,7 +391,7 @@
 
   html,
   body {
-    overflow: hidden;
+    overflow: auto;
   }
 
 }
