@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../Style/produtos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="cabecalho__feed">
+      <div class="container__menu">
+        <input type="checkbox" id="menu" class="container__botao" />
+        <label for="menu" class="container__rotulo">
+          <span class="cabecalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+          <li class="lista-menu__titulo">Vestúario</li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Camisetas</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Calças</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Moletons</a>
+          </li>
+          <li class="lista-menu__titulo">Dark Mode</li>
+          <li class="lista-menu__item" id="tema-escuro">Escuro</li>
+          <li class="lista-menu__item" id="tema-claro">Claro</li>
+          <li class="lista-menu__titulo" id="sair">Sair</li>
+        </ul>
+        <div class="menu-overlay"></div>
+      </div>
+      <img
+        class="logo__cabecalho"
+        src="../assets/nome.png"
+        alt="Logo da Urbane"
+      />
+      <nav class="cabecalho__feed-navegacao">
+        <i class="itens__navegacao"
+          ><img src="../assets/lupa.icon.svg" alt="Lupa"
+        /></i>
+        <a href="#" class="itens__navegacao"
+          ><img src="../assets/sacola.icon.svg" alt="Sacola"
+        /></a>
+        <i class="itens__navegacao">
+          <a href="../html/Login.html">
+            <img src="../assets/perfil.icon.svg" alt="Perfil" />
+          </a>
+        </i>
+      </nav>
+    </header>
+
+    <main class="principal__produto">
+      <div class="paginacao">
+        <img class="casa" src="../assets/icon.home.svg" alt="icone de casa" />
+        <a href="#">Página inicial > </a>
+        <a href="#">Moletons > </a>
+        <a href="#">Moletom básico preto </a>
+      </div>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../assets/teste.png" alt="imagem 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/teste.png" alt="imagem 2" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <span class="produto__descricao">Moletom básico preto</span>
+
+      <section class="descricao__preco">
+        <p class="descricao__preco-produto">
+          <span class="preco__novo-produto">R$59,90</span>
+          <span class="preco__antigo-produto">R$99,90</span>
+        </p>
+        <span class="descricao__preco-parcela">Em até 6x sem juros</span>
+      </section>
+
+      <section class="produto__opcoes">
+        <div class="tamanho__opcoes">
+          <div class="tamanho">
+            <label>Tamanho</label>
+            <div class="tamanhos">
+              <button class="tamanho-item selecionado">PP</button>
+              <button class="tamanho-item">P</button>
+              <button class="tamanho-item">M</button>
+              <button class="tamanho-item">G</button>
+              <button class="tamanho-item">GG</button>
+            </div>
+          </div>
+
+          <div class="quantidade">
+            <label>Quantidade</label>
+            <button class="btn-menos">-</button>
+            <input type="number" min="1" value="1" readonly />
+            <button class="btn-mais">+</button>
+          </div>
+
+          <button class="btn-adicionar">Adicionar ao carrinho +</button>
+        </div>
+      </section>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          <h3>Descrição do produto</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          <h3>Política de Troca e Devoluções</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <script src="../js/modo-claro-escuro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const accordion = header.parentElement;
+          accordion.classList.toggle("open");
+        });
+      });
+    </script>
+  </body>
+</html>
