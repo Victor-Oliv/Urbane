@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../Style/sacola.css" />
+    <title>Carrinho</title>
+  </head>
+  <body>
+    <header class="cabecalho__feed">
+      <div class="container__menu">
+        <input type="checkbox" id="menu" class="container__botao" />
+        <label for="menu" class="container__rotulo">
+          <span class="cabecalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+          <li class="lista-menu__titulo">Vestúario</li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Camisetas</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Calças</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Moletons</a>
+          </li>
+          <li class="lista-menu__titulo">Dark Mode</li>
+          <li class="lista-menu__item" id="tema-escuro">Escuro</li>
+          <li class="lista-menu__item" id="tema-claro">Claro</li>
+          <li class="lista-menu__titulo" id="sair">Sair</li>
+        </ul>
+        <div class="menu-overlay"></div>
+      </div>
+      <a href="../index.html">
+        <img
+          class="logo__cabecalho"
+          src="../assets/nome.png"
+          alt="Logo da Urbane"
+        />
+      </a>
+      <nav class="cabecalho__feed-navegacao">
+        <i class="itens__navegacao"
+          ><img src="../assets/lupa.icon.svg" alt="Lupa"
+        /></i>
+        <a href="../html/sacola.html" class="itens__navegacao"
+          ><img src="../assets/sacola.icon.svg" alt="Sacola"
+        /></a>
+        <i class="itens__navegacao">
+          <a href="../html/Login.html">
+            <img src="../assets/perfil.icon.svg" alt="Perfil" />
+          </a>
+        </i>
+      </nav>
+    </header>
+
+    <main class="principal__carrinho">
+      <h2 class="titulo__carrinho">Carrinho</h2>
+
+      <div class="step-indicator">
+        <div class="step active">
+          <div class="circle">✔</div>
+          <span>Sacola</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <div class="circle">2</div>
+          <span>Identificação</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <div class="circle">3</div>
+          <span>Pagamento</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <div class="circle">4</div>
+          <span>Sucesso</span>
+        </div>
+      </div>
+
+      <div class="step-content active" id="step-1">
+        <section class="sacola">
+        <div class="lista__produtos">
+          <img src="../assets/teste.produto.png" alt="imagem teste" />
+          <div class="lista-descricao">
+          <p>Moletom Preto Básico</p>
+          <span>2 unid</span>
+          <span>P</span>
+          <span>Preto</span>
+          </div>
+          <span class="preco">R$200,00</span>
+        </div>
+        </section>
+        <p>Total: R$400,00</p>
+        <button class="botao-carrinho" onclick="nextStep()">
+          Fechar Pedido
+        </button>
+        <a class="sacola__inicio" href="../index.html">
+          ← Continue Comprando
+        </a>
+      </div>
+
+      <div class="step-content" id="step-2">
+        <p><strong>Identificação</strong></p>
+        <input type="text" placeholder="Nome completo" />
+        <input type="email" placeholder="Email" />
+        <div>
+          <button onclick="prevStep()">Voltar</button>
+          <button onclick="nextStep()">Próximo</button>
+        </div>
+      </div>
+
+      <div class="step-content" id="step-3">
+        <p><strong>Pagamento</strong></p>
+        <input type="text" placeholder="Número do cartão" />
+        <input type="text" placeholder="Validade" />
+        <input type="text" placeholder="CVV" />
+        <div>
+          <button onclick="prevStep()">Voltar</button>
+          <button onclick="nextStep()">Finalizar</button>
+        </div>
+      </div>
+
+      <div class="step-content" id="step-4">
+        <h3>Pedido realizado com sucesso! 🎉</h3>
+        <p>Obrigado por comprar com a Urbane Clothing.</p>
+      </div>
+    </main>
+
+    <script>
+      let currentStep = 1;
+
+      function showStep(step) {
+        // Mostrar o conteúdo da etapa
+        document.querySelectorAll(".step-content").forEach((el, index) => {
+          el.classList.toggle("active", index === step - 1);
+        });
+
+        // Atualizar o step indicator visual
+        const steps = document.querySelectorAll(".step");
+        steps.forEach((el, index) => {
+          const circle = el.querySelector(".circle");
+          if (index < step - 1) {
+            el.classList.add("active");
+            circle.textContent = "✔";
+          } else {
+            el.classList.remove("active");
+            circle.textContent = index + 1;
+          }
+        });
+
+        // Ativa o atual também
+        if (steps[step - 1]) {
+          steps[step - 1].classList.add("active");
+          steps[step - 1].querySelector(".circle").textContent = "✔";
+        }
+      }
+
+      function nextStep() {
+        if (currentStep < 4) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+
+      showStep(currentStep);
+    </script>
+
+    <script src="../js/modo-claro-escuro.js"></script>
+  </body>
+</html>
