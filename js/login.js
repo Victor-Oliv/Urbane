@@ -25,3 +25,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.querySelector('.login__formulario').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const usuario = document.getElementById('nome').value;
+  const senha = document.getElementById('Senha').value;
+  
+  if (!usuario || !senha) {
+      alert('Por favor, preencha todos os campos!');
+      return;
+  }
+  
+  try {
+      const response = await fetch('../php/autenticar.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `usuario=${encodeURIComponent(usuario)}&senha=${encodeURIComponent(senha)}`
+      });
+      
+      if (response.redirected) {
+          window.location.href = response.url;
+      } else {
+          const data = await response.text();
+          alert('Usuário ou senha incorretos!');
+      }
+  } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao conectar com o servidor');
+  }
+});
+
+// Lembrar senha (usando localStorage)
+document.getElementById('lembrar_senha').addEventListener('change', function() {
+  if (this.checked) {
+      localStorage.setItem('lembrarUsuario', document.getElementById('nome').value);
+  } else {
+      localStorage.removeItem('lembrarUsuario');
+  }
+});
+
+// Preencher usuário salvo se existir
+window.addEventListener('DOMContentLoaded', () => {
+  const usuarioSalvo = localStorage.getItem('lembrarUsuario');
+  if (usuarioSalvo) {
+      document.getElementById('nome').value = usuarioSalvo;
+      document.getElementById('lembrar_senha').checked = true;
+  }
+});
