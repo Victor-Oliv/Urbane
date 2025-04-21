@@ -82,24 +82,31 @@
 
       <div class="step-content active" id="step-1">
         <section class="sacola">
-        <div class="lista__produtos">
-          <img src="../assets/teste.produto.png" alt="imagem teste" />
-          <div class="lista-descricao">
-          <p>Moletom Preto Básico</p>
-          <span>2 unid</span>
-          <span>P</span>
-          <span>Preto</span>
+          <div class="lista__produtos">
+            <img src="../assets/teste.produto.png" alt="imagem teste" />
+            <div class="lista-descricao">
+              <p>
+                Moletom Preto Básico
+                <i id="lixo"><img src="../assets/lixeira.svg" alt="lixeira" /></i>
+              </p>
+              <div class="lista__info">
+                <span class="info__produto" id="un">2 unid</span>
+                <span class="info__produto" id="tm">P</span>
+                <span class="info__produto" id="cr">Preto</span>
+                <span class="preco">R$200,00</span>
+              </div>
+            </div>
           </div>
-          <span class="preco">R$200,00</span>
-        </div>
         </section>
-        <p>Total: R$400,00</p>
+        <p class="preco__total">Total: R$400,00</p>
         <button class="botao-carrinho" onclick="nextStep()">
           Fechar Pedido
         </button>
-        <a class="sacola__inicio" href="../index.html">
-          ← Continue Comprando
-        </a>
+        <div class="sacola__inicio">
+          <a href="../index.html">
+            ← Continue Comprando
+          </a>
+        </div>
       </div>
 
       <div class="step-content" id="step-2">
