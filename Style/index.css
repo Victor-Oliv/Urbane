@@ -147,6 +147,12 @@
     text-align: center;
   }
 
+  .card__imagem{
+    width: 308px;
+    height: auto;
+    margin: 1rem
+  }
+
   .card__descricao{
     font-size: 16px;
     font-weight: 500;
