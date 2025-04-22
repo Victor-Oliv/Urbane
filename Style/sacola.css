@@ -133,6 +133,7 @@
   color: var(--cor-principal);
   margin: 0 10%;
   border-radius: 6px;
+  border: none;
 }
 
 .sacola__inicio {
@@ -272,7 +273,6 @@ select {
 }
 
 .voltar__iden {
-  text-decoration: none;
   font-family: var(--fonte-secundaria);
   font-size: 16px;
   color: var(--branco-gelo);
@@ -301,4 +301,138 @@ select {
 .boleto__texto {
   font-size: 13px;
   color: var(--cinza-claro);
+}
+
+.endereco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  background: #2d2d2d;
+  padding: 3rem;
+  border-radius: 8px;
+  color: var(--branco);
+  max-width: 400px;
+  margin: 2em auto;
+}
+
+.endereco__titulo h2 {
+  font-family: var(--fonte-secundaria);
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  width: 295px;
+  padding-bottom: 1rem;
+}
+
+.endereco__rua input {
+  min-width: 295px;
+  min-height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin: 0.5rem 0;
+  color: var(--branco-gelo);
+}
+
+.endereco__rua input::placeholder {
+  padding-left: 0.5rem;
+}
+
+.endereco__cidade {
+  display: flex;
+  padding-left: 0.2rem;
+  gap: 1rem;
+}
+
+.endereco__cidade .cidade {
+  flex: 1;
+  min-width: 30px;
+}
+
+.cidade input {
+  width: 133px;
+  min-height: 40px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  color: var(--branco-gelo);
+}
+
+.cep input {
+  min-width: 295px;
+  min-height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin-top: 0.5rem;
+  color: var(--branco-gelo);
+}
+
+.cep input::placeholder {
+  padding-left: 0.5rem;
+}
+
+.botao__endereco {
+  color: var(--cor-principal);
+  width: 80%;
+  margin: 0 2.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn_vt {
+  margin-top: 2rem;
+}
+
+.voltar__sacola {
+  font-family: var(--fonte-secundaria);
+  font-size: 16px;
+  color: var(--branco-gelo);
+  padding-left: 1rem;
+}
+
+.compra__realizada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  padding: 6rem;
+  text-align: center;
+  color: white;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 170, 0, 0.3);
+  margin: 2rem auto;
+}
+
+.compra__realizada img {
+  width: 100px;
+  margin-bottom: 2rem;
+}
+
+.compra__realizada h3 {
+  font-family: var(--fonte-secundaria);
+  font-weight: 700;
+}
+
+.compra__realizada p {
+  color: var(--branco-gelo);
+  font-size: 15px;
+  line-height: 1.5;
+  padding-top: 1rem;
+}
+
+.irParaPedidos {
+  display: flex;
+  font-family: var(--fonte-secundaria);
+  font-size: 16px;
+  color: var(--branco-gelo);
+  text-decoration: none;
+  justify-content: end;
+  padding-right: 2rem;
 }

@@ -66,7 +66,7 @@
         <div class="line"></div>
         <div class="step">
           <div class="circle">2</div>
-          <span>Identificação</span>
+          <span>Endereço</span>
         </div>
         <div class="line"></div>
         <div class="step">
@@ -110,12 +110,44 @@
       </div>
 
       <div class="step-content" id="step-2">
-        <p><strong>Identificação</strong></p>
-        <input type="text" placeholder="Nome completo" />
-        <input type="email" placeholder="Email" />
+        <div class="endereco">
+          <div class="endereco__titulo">
+            <h2>Endereço de entrega:</h2>
+          </div>
+
+          <div class="endereco__rua">
+            <p class="cartao__descricao">Nome completo:</p>
+            <input type="text" placeholder="Digite seu nome" />
+            <p class="cartao__descricao">Endereço:</p>
+            <input type="text" placeholder="Logradouro" />
+          </div>
+
+          <div class="endereco__cidade">
+            <div class="cidade">
+              <label for="Cidade" class="cartao__descricao">Cidade:</label>
+              <input type="text" id="CD" />
+            </div>
+
+            <div class="cidade">
+              <label for="estado" class="cartao__descricao">Estado:</label>
+              <input type="text" id="estado" />
+            </div>
+          </div>
+          <div class="cep">
+            <p class="cartao__descricao">CEP:</p>
+            <input type="text" placeholder="0000-000" />
+          </div>
+        </div>
         <div>
-          <button onclick="prevStep()">Voltar</button>
-          <button onclick="nextStep()">Próximo</button>
+          <button class="botao__endereco" onclick="nextStep()">
+            Continuar para pagamento
+          </button>
+        </div>
+
+        <div class="btn_vt">
+          <a class="voltar__sacola" onclick="prevStep()"
+            >← Voltar para Sacola</a
+          >
         </div>
       </div>
 
@@ -172,8 +204,9 @@
               <p class="boleto__texto">
                 O pedido será processado após a confirmação do
               </p>
-              <p class="boleto__texto">pagamento, o que
-                pode levar até 3 dias úteis.</p>
+              <p class="boleto__texto">
+                pagamento, o que pode levar até 3 dias úteis.
+              </p>
             </div>
           </div>
 
@@ -188,18 +221,29 @@
             Finalizar Compra
           </button>
           <a class="voltar__iden" onclick="prevStep()"
-            >← Voltar para Identificação</a
+            >← Voltar para endereço</a
           >
         </div>
       </div>
 
       <div class="step-content" id="step-4">
-        <h3>Pedido realizado com sucesso! 🎉</h3>
-        <p>Obrigado por comprar com a Urbane Clothing.</p>
+        <div class="compra__realizada">
+          <img src="../assets/certo.icon.png" alt="Sucesso" />
+          <h3>Pedido realizado com sucesso.</h3>
+          <p>
+            Seu pedido <span id="numb-pedido">#12345</span> foi confirmado e
+            está sendo processado
+          </p>
+        </div>
+        <a class="irParaPedidos" href="#">Ir para meus pedidos →</a>
       </div>
-
-      
     </main>
+
+    <footer class="rodape">
+      <h3 class="rodape__texto">
+        © 2025 URBANE Clothing. Todos os direitos reservados.
+      </h3>
+    </footer>
 
     <script>
       let currentStep = 1;
