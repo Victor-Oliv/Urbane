@@ -1,0 +1,95 @@
+@import url(../Style/index.css);
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.perfil,
+.pedidos {
+  background-color: #2d2d2d;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  color: var(--branco);
+}
+
+.perfil__titulo {
+  font-family: var(--fonte-secundaria);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.perfil__texto {
+  font-family: var(--fonte-secundaria);
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 1rem;
+}
+
+.perfil__label {
+  font-size: 15px;
+  font-family: var(--fonte-secundaria);
+}
+
+.perfil__dados input,
+.pedido__item input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 12px 0;
+  background-color: var(--branco-gelo);
+  color: black;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.linha__cidade {
+  display: flex;
+  gap: 10px;
+}
+
+.linha__cidade div {
+  flex: 1;
+}
+
+.produto {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.produto__imagem {
+  width: 80px;
+  height: 80px;
+  background-color: #999;
+  border-radius: 5px;
+}
+
+.titulo {
+  font-family: var(--fonte-secundaria);
+  font-size: 16px;
+  color: var(--branco);
+  padding-bottom: 0.5rem;
+}
+
+.variacoes span {
+  background-color: white;
+  color: var(--preto);
+  padding: 4px 8px;
+  margin-right: 4px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.preco {
+  font-family: var(--fonte-secundaria);
+  font-weight: 700;
+  margin-top: 14px;
+  font-size: 15px;
+}

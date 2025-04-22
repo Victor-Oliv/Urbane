@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./Style/index.css" />
     <link rel="stylesheet" href="./Style/carrosel.css" />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Feed</title>
   </head>
 
@@ -34,17 +34,19 @@
           <li class="lista-menu__titulo">Dark Mode</li>
           <li class="lista-menu__item" id="tema-escuro">Escuro</li>
           <li class="lista-menu__item" id="tema-claro">Claro</li>
+          <li class="lista-menu__titulo">Pedidos</li>
+          <li class="lista-menu__item"><a href="#" class="lista-menu__link">Meus pedidos</a></li>
           <li class="lista-menu__titulo" id="sair">Sair</li>
         </ul>
         <div class="menu-overlay"></div>
       </div>
       <a href="./index.html">
-          <img
-        class="logo__cabecalho"
-        src="./assets/nome.png"
-        alt="Logo da Urbane"
-      />
-    </a>
+        <img
+          class="logo__cabecalho"
+          src="./assets/nome.png"
+          alt="Logo da Urbane"
+        />
+      </a>
       <nav class="cabecalho__feed-navegacao">
         <i class="itens__navegacao"
           ><img src="./assets/lupa.icon.svg" alt="Lupa"
@@ -54,21 +56,26 @@
         /></a>
         <i class="itens__navegacao">
           <a href="./html/Login.html">
-          <img src="./assets/perfil.icon.svg" alt="Perfil">
+            <img src="./assets/perfil.icon.svg" alt="Perfil" />
           </a>
         </i>
       </nav>
     </header>
 
     <main class="principal__feed">
-
       <section class="banner">
-      <picture>
-        <source media="(min-width: 1400px)" srcset="../assets/banner-desktop.png">
-        <source media="(min-width: 600px)" srcset="../assets/banner-tablet.png">
-      <img class="img__banner" src="./assets/img_1.png" alt="banner" />
-      </picture>
-       </section>
+        <picture>
+          <source
+            media="(min-width: 1400px)"
+            srcset="../assets/banner-desktop.png"
+          />
+          <source
+            media="(min-width: 600px)"
+            srcset="../assets/banner-tablet.png"
+          />
+          <img class="img__banner" src="./assets/img_1.png" alt="banner" />
+        </picture>
+      </section>
 
       <div class="swiper categoria-swiper">
         <div class="swiper-wrapper">
@@ -84,209 +91,253 @@
         </div>
         <div class="swiper-pagination categoria-pagination"></div>
       </div>
-      
-   
 
-      <h1 class="card__texto">Compre 4 camisetas por R$200,00 </h1>
+      <h1 class="card__texto">Compre 4 camisetas por R$200,00</h1>
       <div class="swiper cards-swiper">
         <div class="swiper-wrapper">
-
           <div class="swiper-slide">
             <section>
-            <a href="#" class="card" >
-            <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Camiseta branca oversize</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
-            </section>
-          </div>
-        
-          <div class="swiper-slide">
-            <section>
-            <a href="#" class="card">
-            <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Camiseta preta oversize</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+              <a href="#" class="card">
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/camiseta_branca_frente.png"
+                  alt="Foto de um homem com uma camisera branca oversize"
+                />
+                <span class="card__descricao">Camiseta branca oversize</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Camiseta cinza oversize </span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/camiseta_preta_frente.png"
+                  alt="Foto de um homem com uma camisera preta oversize"
+                />
+                <span class="card__descricao">Camiseta preta oversize</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Camiseta personalizavel oversize</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,99</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/camiseta_cinza_frente.png"
+                  alt="Foto de um homem com uma camisera cinza oversize"
+                />
+                <span class="card__descricao">Camiseta cinza oversize </span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
-        
+          <div class="swiper-slide">
+            <section>
+              <a href="#" class="card">
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/camiseta_personalizavel_frente.png"
+                  alt="Foto de um homem com uma camisera cinza apontando para o peito oversize"
+                />
+                <span class="card__descricao"
+                  >Camiseta personalizavel oversize</span
+                >
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,99</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
+            </section>
+          </div>
         </div>
 
         <div class="swiper-pagination cards-pagination"></div>
       </div>
 
-
-      <h2 class="card__texto">Compre 2 moletons por R$200,00 </h2>
+      <h2 class="card__texto">Compre 2 moletons por R$200,00</h2>
       <div class="swiper cards-swiper">
         <div class="swiper-wrapper">
-        
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Moletom canguru branco</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,99</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/moletom_branco_frente.png"
+                  alt="Foto de um homem com um moletom branco"
+                />
+                <span class="card__descricao">Moletom canguru branco</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,99</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Moletom canguru preto</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
-            </section>
-          </div>
-
-          
-          <div class="swiper-slide">
-            <section>
-              <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Moletom canguru cinza</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/moletom_preto_frente.png"
+                  alt="Foto de um homem com um moletom preto"
+                />
+                <span class="card__descricao">Moletom canguru preto</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Moletom canguru marrom</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/moletom_cinza_frente.png"
+                  alt="Foto de um homem com um moletom cinza"
+                />
+                <span class="card__descricao">Moletom canguru cinza</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
-        
+          <div class="swiper-slide">
+            <section>
+              <a href="#" class="card">
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/moletom_marrom_frente.png"
+                  alt="Foto de um homem com um moletom marrom"
+                />
+                <span class="card__descricao">Moletom canguru marrom</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
+            </section>
+          </div>
         </div>
 
         <div class="swiper-pagination cards-pagination"></div>
       </div>
 
-      <h3 class="card__texto">Compre 2 calças por R$200,00 </h3>
+      <h3 class="card__texto">Compre 2 calças por R$200,00</h3>
       <div class="swiper cards-swiper">
         <div class="swiper-wrapper">
-        
-          <div class="swiper-slide">
-            <section >
-              <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Calça Sarja branca</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,99</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
-            </section>
-          </div>
-
-          
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Calça Sarja preta</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/calca_branca_frente.png"
+                  alt="Foto de um homem com uma calça branca"
+                />
+                <span class="card__descricao">Calça Sarja branca</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,99</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Calça Sarja cinza</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/calca_preta_frente.png"
+                  alt="Foto de um homem com uma calça preta"
+                />
+                <span class="card__descricao">Calça Sarja preta</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
           <div class="swiper-slide">
             <section>
               <a href="#" class="card">
-              <img src="./assets/teste.png" alt="teste" />
-              <span class="card__descricao">Calça verde militar</span>
-              <p class="card__descricao-preco">
-                <span class="preco__novo">R$59,90</span>
-                <span class="preco__antigo">R$99,90</span>
-              </p>
-              <span class="card__descricao-texto">Em até 6X sem juros.</span>
-            </a>
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/calca_cinza_frente.png"
+                  alt="Foto de um homem com uma calça cinza"
+                />
+                <span class="card__descricao">Calça Sarja cinza</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
             </section>
           </div>
 
-        
+          <div class="swiper-slide">
+            <section>
+              <a href="#" class="card">
+                <img
+                  class="card__imagem"
+                  src="./assets/img_produtos/calca_verde_frente.png"
+                  alt="Foto de um homem com uma calça verde"
+                />
+                <span class="card__descricao">Calça verde militar</span>
+                <p class="card__descricao-preco">
+                  <span class="preco__novo">R$59,90</span>
+                  <span class="preco__antigo">R$99,90</span>
+                </p>
+                <span class="card__descricao-texto">Em até 6X sem juros.</span>
+              </a>
+            </section>
+          </div>
         </div>
 
         <div class="swiper-pagination cards-pagination"></div>
       </div>
+    </main>
+
+    <footer class="rodape">
+      <h3 class="rodape__texto">
+        © 2025 URBANE Clothing. Todos os direitos reservados.
+      </h3>
+    </footer>
+
     <script src="./js/modo-claro-escuro.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -294,19 +345,18 @@
     <script>
       let categoriaSwiper;
       let cardsSwipers = [];
-    
+
       function initSwipers() {
         const largura = window.innerWidth;
-    
+
         if (categoriaSwiper) {
           categoriaSwiper.destroy(true, true);
           categoriaSwiper = null;
         }
-    
+
         cardsSwipers.forEach((swiper) => swiper.destroy(true, true));
         cardsSwipers = [];
-    
-        
+
         if (largura < 820) {
           categoriaSwiper = new Swiper(".categoria-swiper", {
             slidesPerView: "auto",
@@ -317,7 +367,7 @@
               clickable: true,
             },
           });
-    
+
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
               slidesPerView: "auto",
@@ -329,13 +379,11 @@
             });
             cardsSwipers.push(swiper);
           });
-    
-      
         } else if (largura >= 820 && largura < 1024) {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
               slidesPerView: 2,
-              spaceBetween: 12, 
+              spaceBetween: 12,
               pagination: {
                 el: swiperEl.querySelector(".cards-pagination"),
                 clickable: true,
@@ -343,7 +391,6 @@
             });
             cardsSwipers.push(swiper);
           });
-    
         } else if (largura >= 1024 && largura <= 1440) {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
@@ -356,8 +403,6 @@
             });
             cardsSwipers.push(swiper);
           });
-    
-      
         } else {
           document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
             const swiper = new Swiper(swiperEl, {
@@ -372,11 +417,9 @@
           });
         }
       }
-    
+
       window.addEventListener("load", initSwipers);
       window.addEventListener("resize", initSwipers);
     </script>
-    
-    
   </body>
 </html>

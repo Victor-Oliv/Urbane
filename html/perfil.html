@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../Style/perfil.css" />
+    <title>perfil</title>
+  </head>
+  <body>
+    <header class="cabecalho__feed">
+      <div class="container__menu">
+        <input type="checkbox" id="menu" class="container__botao" />
+        <label for="menu" class="container__rotulo">
+          <span class="cabecalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <ul class="lista-menu">
+          <li class="lista-menu__titulo">Vestúario</li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Camisetas</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Calças</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Moletons</a>
+          </li>
+          <li class="lista-menu__titulo">Dark Mode</li>
+          <li class="lista-menu__item" id="tema-escuro">Escuro</li>
+          <li class="lista-menu__item" id="tema-claro">Claro</li>
+          <li class="lista-menu__titulo">Pedidos</li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Meus pedidos</a>
+          </li>
+          <li class="lista-menu__titulo" id="sair">Sair</li>
+        </ul>
+        <div class="menu-overlay"></div>
+      </div>
+      <a href="../index.html">
+        <img
+          class="logo__cabecalho"
+          src="../assets/nome.png"
+          alt="Logo da Urbane"
+        />
+      </a>
+      <nav class="cabecalho__feed-navegacao">
+        <i class="itens__navegacao"
+          ><img src="../assets/lupa.icon.svg" alt="Lupa"
+        /></i>
+        <a href="../html/sacola.html" class="itens__navegacao"
+          ><img src="../assets/sacola.icon.svg" alt="Sacola"
+        /></a>
+        <i class="itens__navegacao">
+          <a href="../html/Login.html">
+            <img src="../assets/perfil.icon.svg" alt="Perfil" />
+          </a>
+        </i>
+      </nav>
+    </header>
+
+    <main>
+      <section class="perfil">
+        <h2 class="perfil__titulo">Minha Conta</h2>
+        <div class="perfil__dados">
+          <h3 class="perfil__texto">Meus dados</h3>
+          <label class="perfil__label">Nome Completo:</label>
+          <input type="text" id="nome" readonly />
+
+          <label class="perfil__label">Telefone:</label>
+          <input type="text" id="telefone" readonly />
+
+          <label class="perfil__label">E-mail:</label>
+          <input type="email" id="email" readonly />
+
+          <label class="perfil__label">Endereço:</label>
+          <input type="text" id="endereco" readonly />
+
+          <div class="linha__cidade">
+            <div>
+              <label class="perfil__label">Cidade:</label>
+              <input type="text" id="cidade" readonly />
+            </div>
+            <div>
+              <label class="perfil__label">Estado:</label>
+              <input type="text" id="estado" readonly />
+            </div>
+          </div>
+
+          <label class="perfil__label">CEP:</label>
+          <input type="text" id="cep" readonly />
+        </div>
+      </section>
+
+      <section class="pedidos">
+        <h2 class="perfil__titulo">Meus pedidos</h2>
+        <div class="pedido__item">
+          <h3 class="perfil__texto">Pedidos</h3>
+          <div class="produto">
+            <div class="produto__imagem"></div>
+            <div class="produto__info">
+              <p class="titulo">Moletom Preto Básico</p>
+              <div class="variacoes">
+                <span>2 unid.</span>
+                <span>P</span>
+                <span>Preto</span>
+              </div>
+              <p class="preco">R$200,00</p>
+            </div>
+          </div>
+
+          <label class="perfil__label">Número do pedido</label>
+          <input type="text" value="#123456" readonly />
+
+          <label class="perfil__label">Status</label>
+          <input type="text" value="A Caminho" readonly />
+        </div>
+      </section>
+    </main>
+    <script src="../js/modo-claro-escuro.js"></script>
+  </body>
+</html>
