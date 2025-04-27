@@ -35,89 +35,89 @@
       </div>
     </div>
 
-   <form class="formulario">
+    <form class="formulario" action="../PHP/cadastrar.php" method="post">
       <h2 class="formulario__descricao">Cadastro</h2>
-    <div class="formulario__nome-usuario">
-      <div>
-          <label class="formulario__texto"
-          >Nome e usuario:
-        <div>
-          <input
-            type="text"
-            class="nomeEsobrenome-cadastro"
-            placeholder="Nome"
-            id="nome-cadastro"
-          />
-          </label>
-        </div>
+      <div class="formulario__nome-usuario">
+          <div>
+              <label class="formulario__texto">
+                  Nome e usuario:
+                  <div>
+                      <input
+                          type="text"
+                          class="nomeEsobrenome-cadastro"
+                          placeholder="Nome"
+                          id="nome-cadastro"
+                          name="nome_completo" />
+                  </div>
+              </label>
+          </div>
+  
+          <div>
+              <label class="formulario__texto"> Usuario:
+                  <div>
+                      <input
+                          type="text"
+                          class="nomeEsobrenome-cadastro"
+                          placeholder="@usuario"
+                          id="usuario"
+                          name="usuario" />
+                  </div>
+              </label>
+          </div>
       </div>
-
-      <div>
-          <label class="formulario__texto"> Usuario:
-        <div>
-          <input
-            type="text"
-            class="nomeEsobrenome-cadastro"
-            placeholder="@usuario"
-            id="usuario"
-          />
-        </div>
-          </label>
-      </div>
-    </div>
-      <label class="formulario__texto" for="dia-cadastro"
-        >Data de nascimento:
-        <div>
-          <input
-            type="number"
-            class="data__nascimento"
-            placeholder="Dia"
-            id="dia-cadastro"
-          />
-          <input
-            type="number"
-            class="data__nascimento"
-            placeholder="Mês"
-            id="mes-cadastro"
-          />
-          <input
-            type="number"
-            class="data__nascimento"
-            placeholder="Ano"
-            id="ano-cadastro"
-          />
-        </div>
+      <label class="formulario__texto" for="dia-cadastro">
+          Data de nascimento:
+          <div>
+              <input
+                  type="number"
+                  class="data__nascimento"
+                  placeholder="Dia"
+                  id="dia-cadastro"
+                  name="dia" />
+              <input
+                  type="number"
+                  class="data__nascimento"
+                  placeholder="Mês"
+                  id="mes-cadastro"
+                  name="mes" />
+              <input
+                  type="number"
+                  class="data__nascimento"
+                  placeholder="Ano"
+                  id="ano-cadastro"
+                  name="ano" />
+          </div>
       </label>
-      <label class="formulario__texto" for="email-cadastro"
-        >E-mail e senha:
-        <div class="formulario__input-email-senha">
-          <input
-            type="email"
-            class="formulario__emailEsenha"
-            placeholder="Digite seu e-mail"
-            id="email-cadastro"
-          />
-          <input
-            type="password"
-            class="formulario__emailEsenha senha-cadastro"
-            placeholder="Digite uma senha"
-            id="senha-cadastro"
-          />
-        </div>
+      <label class="formulario__texto" for="email-cadastro">
+          E-mail e senha:
+          <div class="formulario__input-email-senha">
+              <input
+                  type="email"
+                  class="formulario__emailEsenha"
+                  placeholder="Digite seu e-mail"
+                  id="email-cadastro"
+                  name="email" />
+              <input
+                  type="password"
+                  class="formulario__emailEsenha senha-cadastro"
+                  placeholder="Digite uma senha"
+                  id="senha-cadastro"
+                  name="senha" />
+          </div>
       </label>
       <div class="botao__cadastrar">
-        <button class="formulario__botao-cadastrar">Cadastre-se</button>
+          <button type="submit" class="formulario__botao-cadastrar">Cadastre-se</button>
       </div>
       <img class="barra-cadastro" src="../assets/barra.svg" alt="barra">
       <div class="cadastro__alternativo">
-        <button class="botao__google"><img class="icones-img" src="../assets/icon_google 1.svg" alt="icone google"></button>
-        <button class="botao__apple"><img class="icones-img" src="../assets/icon_apple 1.svg" alt="icone apple"></button>
+          <button class="botao__google"><img class="icones-img" src="../assets/icon_google 1.svg" alt="icone google"></button>
+          <button class="botao__apple"><img class="icones-img" src="../assets/icon_apple 1.svg" alt="icone apple"></button>
       </div>
       <span class="cadastro__entrar-texto">
-        Já tem uma conta?
-        <a href="../html/Login.html" class="cadastro__link-entrar">Entrar</a>
+          Já tem uma conta?
+          <a href="../html/Login.html" class="cadastro__link-entrar">Entrar</a>
       </span>
-    </form>
+  </form>  
     </main>
   </body>
   <script src="../js/modo-claro-escuro.js"></script>

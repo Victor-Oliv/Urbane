@@ -1,11 +1,11 @@
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS urbane_clothing;
+CREATE DATABASE urbane_clothing;
 
 USE urbane_clothing;
 
 -- Tabela de Usuários
-CREATE TABLE IF NOT EXISTS usuarios (
-    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE usuarios (
+    id_usuario INT PRIMARY KEY,
     nome_completo VARCHAR(100) NOT NULL,
     usuario VARCHAR(50) NOT NULL UNIQUE,
     data_nascimento DATE NOT NULL,
@@ -15,8 +15,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 -- Tabela de Endereços (opcional, mas recomendado para e-commerce)
-CREATE TABLE IF NOT EXISTS enderecos (
-    id_endereco INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE enderecos (
+    id_endereco INT PRIMARY KEY,
     id_usuario INT NOT NULL,
     cep VARCHAR(10) NOT NULL,
     logradouro VARCHAR(100) NOT NULL,
@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS enderecos (
 );
 
 -- Tabela de Preferências (opcional)
-CREATE TABLE IF NOT EXISTS preferencias (
-    id_preferencia INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE preferencias (
+    id_preferencia INT PRIMARY KEY,
     id_usuario INT NOT NULL,
     tema_preferido VARCHAR(20) DEFAULT 'escuro',
     receber_promocoes BOOLEAN DEFAULT true,

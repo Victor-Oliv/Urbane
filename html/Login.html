@@ -24,64 +24,61 @@
           >Moda para quem redefine o agora.</span
         >
       </div>
-      <form class="login__formulario">
+      <form class="login__formulario" action="../PHP/login.php" method="post">
         <p class="login__formulario-texto">Login</p>
         <div>
-          <p class="login__texto">Nome de usuario:</p>
-          <input
-            class="login__input"
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Digite seu usuario"
-          />
+            <p class="login__texto">Nome de usuario:</p>
+            <input
+                class="login__input"
+                type="text"
+                id="nome"
+                name="usuario" placeholder="Digite seu usuario"
+            />
         </div>
         <div>
-          <p class="login__texto">Senha:</p>
-          <input
-            class="login__input login_input-senha"
-            type="password"
-            name="Senha"
-            id="Senha"
-            placeholder="Digite sua senha"
-          />
+            <p class="login__texto">Senha:</p>
+            <input
+                class="login__input login_input-senha"
+                type="password"
+                name="senha" id="Senha"
+                placeholder="Digite sua senha"
+            />
         </div>
         <div class="login__formulario-LembrareEsqueciSenha">
-          <input
-            class="input__lembrarsenha"
-            type="checkbox"
-            id="lembrar_senha"
-          />
-          <span class="input__texto-lembrar-senha">Lembrar senha</span>
-          <a href="#" class="login__formulario-esqueci-a-senha"
-            >Esqueci a senha</a
-          >
+            <input
+                class="input__lembrarsenha"
+                type="checkbox"
+                id="lembrar_senha"
+                name="lembrar_senha" />
+            <span class="input__texto-lembrar-senha">Lembrar senha</span>
+            <a href="#" class="login__formulario-esqueci-a-senha"
+                >Esqueci a senha</a
+            >
         </div>
-        <button class="login__formulario-btnEntrar">Entrar</button>
-        <img class="img__barra-login" src="../assets/barra.svg" alt="barra" />
+        <button type="submit" class="login__formulario-btnEntrar">Entrar</button> <img class="img__barra-login" src="../assets/barra.svg" alt="barra" />
         <div class="login__Alternativo">
-          <button class="botao__google">
-            <img
-              class="icones-img"
-              src="../assets/icon_google 1.svg"
-              alt="icone google"
-            />
-          </button>
-          <button class="botao__apple">
-            <img
-              class="icones-img"
-              src="../assets/icon_apple 1.svg"
-              alt="icone apple"
-            />
-          </button>
+            <button class="botao__google">
+                <img
+                    class="icones-img"
+                    src="../assets/icon_google 1.svg"
+                    alt="icone google"
+                />
+            </button>
+            <button class="botao__apple">
+                <img
+                    class="icones-img"
+                    src="../assets/icon_apple 1.svg"
+                    alt="icone apple"
+                />
+            </button>
         </div>
         <p class="login__formulario-cadastrar">
-          Não tem uma conta?
-          <a href="../html/cadastro.html" class="login__formulario-cadastrar-link"
-            >Registre-se</a
-          >
+            Não tem uma conta?
+            <a href="../html/cadastro.html" class="login__formulario-cadastrar-link"
+                >Registre-se</a
+            >
         </p>
-      </form>
+    </form>
     </main>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="../js/login.js"></script>
