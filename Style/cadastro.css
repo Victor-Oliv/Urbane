@@ -129,6 +129,10 @@
   background-color: var(--branco-gelo);
 }
 
+.senha-cadastro.olho-aberto {
+  background-image: url("../assets/olho_aberto.svg");
+}
+
 .formulario__emailEsenha {
   width: 377px;
   height: 40px;
