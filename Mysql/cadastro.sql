@@ -14,6 +14,7 @@ CREATE TABLE usuarios (
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
 -- Tabela de Endereços (opcional, mas recomendado para e-commerce)
 CREATE TABLE enderecos (
     id_endereco INT PRIMARY KEY,
