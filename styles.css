@@ -29,3 +29,11 @@ body {
   --branco: #474646;
   --cinza-claro: #999999;
 }
+
+#moletons {
+  display: none;
+}
+
+#calcas {
+  display: none;
+}

@@ -75,3 +75,4 @@ window.addEventListener('DOMContentLoaded', () => {
       document.getElementById('lembrar_senha').checked = true;
   }
 });
+
