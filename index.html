@@ -346,88 +346,9 @@
     </footer>
 
     <script src="./js/modo-claro-escuro.js"></script>
-
+    <script src="./js/interatividade.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-      let categoriaSwiper;
-      let cardsSwipers = [];
-
-      function initSwipers() {
-        const largura = window.innerWidth;
-
-        if (categoriaSwiper) {
-          categoriaSwiper.destroy(true, true);
-          categoriaSwiper = null;
-        }
-
-        cardsSwipers.forEach((swiper) => swiper.destroy(true, true));
-        cardsSwipers = [];
-
-        if (largura < 820) {
-          categoriaSwiper = new Swiper(".categoria-swiper", {
-            slidesPerView: "auto",
-            centeredSlides: true,
-            spaceBetween: 16,
-            pagination: {
-              el: ".categoria-pagination",
-              clickable: true,
-            },
-          });
-
-          document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
-            const swiper = new Swiper(swiperEl, {
-              slidesPerView: "auto",
-              spaceBetween: 16,
-              pagination: {
-                el: swiperEl.querySelector(".cards-pagination"),
-                clickable: true,
-              },
-            });
-            cardsSwipers.push(swiper);
-          });
-        } else if (largura >= 820 && largura < 1024) {
-          document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
-            const swiper = new Swiper(swiperEl, {
-              slidesPerView: 2,
-              spaceBetween: 12,
-              pagination: {
-                el: swiperEl.querySelector(".cards-pagination"),
-                clickable: true,
-              },
-            });
-            cardsSwipers.push(swiper);
-          });
-        } else if (largura >= 1024 && largura <= 1440) {
-          document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
-            const swiper = new Swiper(swiperEl, {
-              slidesPerView: 3,
-              spaceBetween: 16,
-              pagination: {
-                el: swiperEl.querySelector(".cards-pagination"),
-                clickable: true,
-              },
-            });
-            cardsSwipers.push(swiper);
-          });
-        } else {
-          document.querySelectorAll(".cards-swiper").forEach((swiperEl) => {
-            const swiper = new Swiper(swiperEl, {
-              slidesPerView: 4,
-              spaceBetween: 20,
-              pagination: {
-                el: swiperEl.querySelector(".cards-pagination"),
-                clickable: true,
-              },
-            });
-            cardsSwipers.push(swiper);
-          });
-        }
-      }
-
-      window.addEventListener("load", initSwipers);
-      window.addEventListener("resize", initSwipers);
-    </script>
 
     <script src="./js/index.js"></script>
   </body>

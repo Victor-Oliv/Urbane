@@ -25,6 +25,11 @@ main {
   margin-bottom: 20px;
 }
 
+[data-theme="claro"]
+.perfil__titulo{
+  color: #ccc;
+}
+
 .perfil__texto {
   font-family: var(--fonte-secundaria);
   font-weight: 700;
@@ -32,9 +37,19 @@ main {
   padding-bottom: 1rem;
 }
 
+[data-theme="claro"]
+.perfil__texto{
+  color: #ccc;
+}
+
 .perfil__label {
   font-size: 15px;
   font-family: var(--fonte-secundaria);
+}
+
+[data-theme="claro"]
+.perfil__label{
+  color: #ccc;
 }
 
 .perfil__dados input,
@@ -78,6 +93,11 @@ main {
   padding-bottom: 0.5rem;
 }
 
+[data-theme="claro"]
+.titulo{
+  color: #ccc;
+}
+
 .variacoes span {
   background-color: white;
   color: var(--preto);
@@ -87,6 +107,7 @@ main {
   font-size: 12px;
 }
 
+
 .preco {
   font-family: var(--fonte-secundaria);
   font-weight: 700;
@@ -94,6 +115,10 @@ main {
   font-size: 15px;
 }
 
+[data-theme="claro"]
+.preco{
+  color: #ccc;
+}
 
 @media screen and (min-width: 1024px) {
   main {
