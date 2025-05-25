@@ -1,39 +1,30 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const botoes = document.querySelectorAll('.botao-categoria');
-  const secoes = {
-    Camisetas: document.getElementById('camisetas'),
-    Moletons: document.getElementById('moletons'),
-    'Calças': document.getElementById('calcas')
-  };
+  const secoes = document.querySelectorAll('.produtos__secao');
 
-  function mostrarCategoria(categoria) {
-    // Oculta todas as categorias
-    for (let secao in secoes) {
-      secoes[secao].style.display = 'none';
-    }
 
-    // Exibe a categoria selecionada
-    if (secoes[categoria]) {
-      secoes[categoria].style.display = 'block';
-    }
-
-    // Atualiza classe ativa nos botões
-    botoes.forEach(botao => {
-      botao.classList.remove('ativo');
-      if (botao.textContent === categoria) {
-        botao.classList.add('ativo');
-      }
-    });
+  function mostrarTodos() {
+    secoes.forEach(secao => secao.classList.remove('hidden'));
+    botoes.forEach(b => b.classList.remove('ativo'));
   }
 
-  // Adiciona eventos aos botões
+ 
+  mostrarTodos();
+
   botoes.forEach(botao => {
-    botao.addEventListener('click', function () {
-      const categoria = this.textContent;
-      mostrarCategoria(categoria);
+    botao.addEventListener('click', () => {
+      const categoria = botao.dataset.categoria;
+
+      botoes.forEach(b => b.classList.remove('ativo'));
+      botao.classList.add('ativo');
+
+      secoes.forEach(secao => {
+        if (secao.dataset.categoria === categoria) {
+          secao.classList.remove('hidden');
+        } else {
+          secao.classList.add('hidden');
+        }
+      });
     });
   });
-
-  // Mostra "Camisetas" por padrão
-  mostrarCategoria('Camisetas');
 });

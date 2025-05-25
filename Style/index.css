@@ -15,6 +15,10 @@ main {
   padding-bottom: 70px;
 }
 
+.hidden{
+  display: none;
+}
+
 .cabecalho__feed {
   display: flex;
   justify-content: space-between;
