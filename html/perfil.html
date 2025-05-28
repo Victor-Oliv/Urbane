@@ -117,6 +117,23 @@
         </div>
       </section>
     </main>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch('../api/perfil.php')
+    .then(res => res.json())
+    .then(dados => {
+      document.getElementById('nome').value = dados.nome_completo;
+      document.getElementById('telefone').value = dados.telefone || '';
+      document.getElementById('email').value = dados.email;
+      document.getElementById('endereco').value = dados.logradouro;
+      document.getElementById('cidade').value = dados.cidade;
+      document.getElementById('estado').value = dados.estado;
+      document.getElementById('cep').value = dados.cep;
+    })
+    .catch(err => console.error("Erro ao carregar dados do perfil:", err));
+});
+</script>
     <script src="../js/modo-claro-escuro.js"></script>
+    <script src="../js/perfil.js"></script>
   </body>
 </html>

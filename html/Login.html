@@ -27,22 +27,24 @@
       <form class="login__formulario" action="../PHP/login.php" method="post">
         <p class="login__formulario-texto">Login</p>
         <div>
-            <p class="login__texto">Nome de usuario:</p>
-            <input
-                class="login__input"
-                type="text"
-                id="nome"
-                name="usuario" placeholder="Digite seu usuario"
-            />
+          <p class="login__texto">Nome de usuario:</p>
+          <input
+            class="login__input"
+            type="text"
+            id="nome"
+            name="usuario"
+            placeholder="Digite seu usuario"
+            required />
         </div>
         <div>
-            <p class="login__texto">Senha:</p>
-            <input
-                class="login__input login_input-senha"
-                type="password"
-                name="senha" id="Senha"
-                placeholder="Digite sua senha"
-            />
+          <p class="login__texto">Senha:</p>
+          <input
+            class="login__input login_input-senha"
+            type="password"
+            name="senha"
+            id="Senha"
+            placeholder="Digite sua senha"
+            required />
         </div>
         <div class="login__formulario-LembrareEsqueciSenha">
             <input
@@ -81,7 +83,7 @@
     </form>
     </main>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="../js/login.js"></script>
     <script src="../js/modo-claro-escuro.js"></script>
+    <script src="../js/interatividade.js"></script>
   </body>
 </html>

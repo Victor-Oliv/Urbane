@@ -38,7 +38,7 @@ document.querySelector('.login__formulario').addEventListener('submit', async fu
   }
   
   try {
-      const response = await fetch('../php/autenticar.php', {
+      const response = await fetch('../PHP/login.php', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
@@ -50,7 +50,7 @@ document.querySelector('.login__formulario').addEventListener('submit', async fu
           window.location.href = response.url;
       } else {
           const data = await response.text();
-          alert('Usuário ou senha incorretos!');
+          alert('Usuário e senha não encontrados!');
       }
   } catch (error) {
       console.error('Erro:', error);
@@ -75,4 +75,3 @@ window.addEventListener('DOMContentLoaded', () => {
       document.getElementById('lembrar_senha').checked = true;
   }
 });
-
