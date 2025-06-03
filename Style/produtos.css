@@ -293,3 +293,10 @@
   }
   
 }
+
+
+
+.tamanho-item.ativo {
+  background-color: #007bff; /* azul, por exemplo */
+  color: white;
+}

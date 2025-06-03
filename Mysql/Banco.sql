@@ -68,3 +68,13 @@ CREATE TABLE pagamentos (
     valor_pago DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido)
 );
+
+CREATE TABLE carrinho (
+    id_carrinho INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_variacao INT,
+    quantidade INT DEFAULT 1,
+    data_adicionado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_variacao) REFERENCES variacoes_produto(id_variacao)
+);
