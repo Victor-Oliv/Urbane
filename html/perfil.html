@@ -94,7 +94,7 @@
 
       <section class="pedidos">
         <h2 class="perfil__titulo">Meus pedidos</h2>
-        <div class="pedido__item">
+        <div class="lista-pedidos">
           <h3 class="perfil__texto">Pedidos</h3>
           <div class="produto">
             <div class="produto__imagem"></div>
@@ -117,23 +117,51 @@
         </div>
       </section>
     </main>
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  fetch('../api/perfil.php')
+
+<script>
+document.addEventListener("DOMContentLoaded", () => { 
+  fetch('../api/meus_pedidos.php')
     .then(res => res.json())
-    .then(dados => {
-      document.getElementById('nome').value = dados.nome_completo;
-      document.getElementById('telefone').value = dados.telefone || '';
-      document.getElementById('email').value = dados.email;
-      document.getElementById('endereco').value = dados.logradouro;
-      document.getElementById('cidade').value = dados.cidade;
-      document.getElementById('estado').value = dados.estado;
-      document.getElementById('cep').value = dados.cep;
+    .then(pedidos => {
+      const container = document.getElementById('lista-pedidos');
+      if (!pedidos.length) {
+        container.innerHTML = '<p>Você ainda não fez pedidos.</p>';
+        return;
+      }
+
+      pedidos.forEach(pedido => {
+        const pedidoHTML = `
+          <div class="pedido__item">
+            <h3 class="perfil__texto">Pedido #${pedido.id}</h3>
+            ${pedido.itens.map(item => `
+              <div class="produto">
+                <div class="produto__imagem"></div>
+                <div class="produto__info">
+                  <p class="titulo">${item.nome}</p>
+                  <div class="variacoes">
+                    <span>${item.quantidade} unid.</span>
+                    <span>${item.tamanho}</span>
+                    <span>${item.cor}</span>
+                  </div>
+                  <p class="preco">R$${parseFloat(item.preco).toFixed(2)}</p>
+                </div>
+              </div>
+            `).join('')}
+            <label class="perfil__label">Status</label>
+            <input type="text" value="${pedido.status}" readonly />
+          </div>
+        `;
+        container.innerHTML += pedidoHTML;
+      });
     })
-    .catch(err => console.error("Erro ao carregar dados do perfil:", err));
+    .catch(err => console.error("Erro ao carregar pedidos:", err));
 });
 </script>
+
     <script src="../js/modo-claro-escuro.js"></script>
     <script src="../js/perfil.js"></script>
   </body>
 </html>
+
+
+
