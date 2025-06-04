@@ -14,6 +14,18 @@ if (inputSenha) {
   });
 }
 
+function corrigirCaminho(caminhoOriginal) {
+  if (window.location.pathname.includes("/html/")) {
+    if (caminhoOriginal.startsWith("./")) {
+      return caminhoOriginal.replace("./", "../");
+    }
+    if (!caminhoOriginal.startsWith("../") && !caminhoOriginal.startsWith("/")) {
+      return "../" + caminhoOriginal;
+    }
+  }
+  return caminhoOriginal;
+}
+
 function initAccordion() {
   document.querySelectorAll(".accordion-header").forEach((header) => {
     header.addEventListener("click", () => {
@@ -97,12 +109,116 @@ function initSwipers() {
   }
 }
 
-
 function getSlugFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get("slug");
 }
 
+function setupAdicionarAoCarrinho(produto) {
+  const btnAdicionar = document.querySelector(".btn-adicionar");
+  if (!btnAdicionar) return;
+
+  btnAdicionar.addEventListener("click", () => {
+    const tamanhoSelecionado = document.querySelector(".tamanho-item.selected");
+    if (!tamanhoSelecionado) {
+      alert("Por favor, selecione um tamanho.");
+      return;
+    }
+
+    const tamanho = tamanhoSelecionado.textContent;
+    const precoUnitario = produto.preco;
+    const imagem = corrigirCaminho(produto.imagens.frente);
+
+    const itemCarrinho = {
+      nome: produto.nome,
+      tamanho: tamanho,
+      preco: precoUnitario,
+      imagem: imagem,
+      slug: produto.slug,
+    };
+
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    carrinho.push(itemCarrinho);
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert("Produto adicionado ao carrinho!");
+  });
+}
+
+function atualizarTotal() {
+  const precos = document.querySelectorAll(".sacola .preco");
+  let total = 0;
+
+  precos.forEach(precoEl => {
+    const precoTexto = precoEl.textContent.replace("R$", "").trim().replace(",", ".");
+    total += parseFloat(precoTexto);
+  });
+
+  let totalEl = document.querySelector(".preco__total");
+  if (!totalEl) {
+    totalEl = document.createElement("p");
+    totalEl.classList.add("preco__total");
+    document.querySelector(".carrinho").appendChild(totalEl);
+  }
+  totalEl.textContent = `Total: R$ ${total.toFixed(2)}`;
+}
+
+function carregarCarrinho() {
+  const carrinhoContainer = document.querySelector(".carrinho");
+  if (!carrinhoContainer) return;
+
+  carrinhoContainer.innerHTML = "";
+
+  const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  if (carrinho.length === 0) {
+    carrinhoContainer.innerHTML = `
+      <p style="padding: 20px; font-size: 1.2rem; text-align: center; color: #666;">
+        Seu carrinho está vazio.
+      </p>
+    `;
+    atualizarTotal();
+    return;
+  }
+
+  carrinho.forEach((item, index) => {
+    const sacola = document.createElement("section");
+    sacola.classList.add("sacola");
+
+    sacola.innerHTML = `
+      <div class="lista__produtos">
+        <img class="imagem-produto" src="${corrigirCaminho(item.imagem)}" alt="${item.nome}" />
+        <div class="lista-descricao">
+          <p>
+            ${item.nome}
+            <i class="lixeira" data-index="${index}">
+              <img class="imagem-lixeira" src="${corrigirCaminho('../assets/lixeira.svg')}" alt="lixeira" />
+            </i>
+          </p>
+          <div class="lista__info">
+            <span class="info__produto un">1 unid</span>
+            <span class="info__produto tm">${item.tamanho}</span>
+            <span class="preco">R$ ${item.preco}</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    carrinhoContainer.appendChild(sacola);
+
+    sacola.querySelector(".lixeira").addEventListener("click", (e) => {
+      const idx = parseInt(e.currentTarget.getAttribute("data-index"));
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      carrinho.splice(idx, 1);
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      carregarCarrinho();
+    });
+  });
+
+  atualizarTotal();
+}
+
+const caminhoProdutosJSON = window.location.pathname.includes("/html/") ? "../produtos.json" : "./produtos.json";
 
 function loadProduto() {
   const slug = getSlugFromURL();
@@ -112,7 +228,7 @@ function loadProduto() {
     return;
   }
 
-  fetch("../produtos.json")
+  fetch(caminhoProdutosJSON)
     .then((res) => res.json())
     .then((produtos) => {
       const produto = produtos.find((p) => p.slug === slug);
@@ -130,10 +246,10 @@ function loadProduto() {
       if (swiperWrapper) {
         swiperWrapper.innerHTML = `
           <div class="swiper-slide">
-            <img src="${produto.imagens.frente}" alt="${produto.nome} frente" />
+            <img src="${corrigirCaminho(produto.imagens.frente)}" alt="${produto.nome} frente" />
           </div>
           <div class="swiper-slide">
-            <img src="${produto.imagens.costas}" alt="${produto.nome} costas" />
+            <img src="${corrigirCaminho(produto.imagens.costas)}" alt="${produto.nome} costas" />
           </div>
         `;
       }
@@ -141,10 +257,17 @@ function loadProduto() {
       const tamanhosContainer = document.querySelector(".tamanhos");
       if (tamanhosContainer) {
         tamanhosContainer.innerHTML = "";
+
         produto.tamanhos.forEach((tamanho) => {
           const btn = document.createElement("button");
           btn.classList.add("tamanho-item");
           btn.textContent = tamanho;
+
+          btn.addEventListener("click", () => {
+            document.querySelectorAll(".tamanho-item").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          });
+
           tamanhosContainer.appendChild(btn);
         });
       }
@@ -160,6 +283,8 @@ function loadProduto() {
           clickable: true,
         },
       });
+
+      setupAdicionarAoCarrinho(produto);
     })
     .catch((err) => {
       console.error("Erro ao carregar produtos:", err);
@@ -167,7 +292,7 @@ function loadProduto() {
 }
 
 function updateCardsHref() {
-  fetch("./produtos.json")
+  fetch(caminhoProdutosJSON)
     .then((res) => res.json())
     .then((produtos) => {
       const cards = document.querySelectorAll(".card");
@@ -176,7 +301,8 @@ function updateCardsHref() {
         const nomeCard = card.querySelector(".card__descricao").textContent.trim();
         const produto = produtos.find((p) => p.nome === nomeCard);
         if (produto) {
-          card.href = `produto.html?slug=${produto.slug}`;
+          const prefixo = window.location.pathname.includes("/html/") ? "../" : "";
+          card.href = `${prefixo}produto.html?slug=${produto.slug}`;
         } else {
           console.warn(`Produto não encontrado para: ${nomeCard}`);
         }
@@ -185,10 +311,19 @@ function updateCardsHref() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+
   initAccordion();
   initSwipers();
   updateCardsHref();
-  loadProduto();
+
+  if (path.includes("produto.html")) {
+    loadProduto();
+  }
+
+  if (path.includes("sacola.html")) {
+    carregarCarrinho();
+  }
 });
 
 window.addEventListener("resize", initSwipers);

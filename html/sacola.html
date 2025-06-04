@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="../Style/sacola.css" />
+    <link rel="stylesheet" href="../Style/img-prod.css">
     <title>Carrinho</title>
   </head>
   <body>
@@ -85,24 +86,7 @@
       </section>
 
       <div class="step-content active" id="step-1">
-        <section class="sacola">
-          <div class="lista__produtos">
-            <img src="../assets/teste.produto.png" alt="imagem teste" />
-            <div class="lista-descricao">
-              <p>
-                Moletom Preto Básico
-                <i id="lixo"
-                  ><img src="../assets/lixeira.svg" alt="lixeira"
-                /></i>
-              </p>
-              <div class="lista__info">
-                <span class="info__produto" id="un">2 unid</span>
-                <span class="info__produto" id="tm">P</span>
-                <span class="info__produto" id="cr">Preto</span>
-                <span class="preco">R$200,00</span>
-              </div>
-            </div>
-          </div>
+        <div class="carrinho"></div>
         </section>
         <p class="preco__total">Total: R$400,00</p>
         <button class="botao-carrinho" onclick="nextStep()">
@@ -307,5 +291,6 @@
     </script>
 
     <script src="../js/modo-claro-escuro.js"></script>
+    <script src="../js/interatividade.js"></script>
   </body>
 </html>

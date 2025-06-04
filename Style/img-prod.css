@@ -1,0 +1,32 @@
+.imagem-produto {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .imagem-produto {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .imagem-produto {
+    max-width: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .imagem-produto {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .imagem-produto {
+    max-width: 150px;
+  }
+}
