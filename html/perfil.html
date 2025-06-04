@@ -117,45 +117,47 @@
         </div>
       </section>
     </main>
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
+
+<script>
+document.addEventListener("DOMContentLoaded", () => { 
   fetch('../api/meus_pedidos.php')
-  .then(res => res.json())
-  .then(pedidos => {
-    const container = document.getElementById('lista-pedidos');
-    if (!pedidos.length) {
-      container.innerHTML = '<p>Você ainda não fez pedidos.</p>';
-      return;
-    }
+    .then(res => res.json())
+    .then(pedidos => {
+      const container = document.getElementById('lista-pedidos');
+      if (!pedidos.length) {
+        container.innerHTML = '<p>Você ainda não fez pedidos.</p>';
+        return;
+      }
 
-    pedidos.forEach(pedido => {
-      const pedidoHTML = `
-        <div class="pedido__item">
-          <h3 class="perfil__texto">Pedido #${pedido.id}</h3>
-          ${pedido.itens.map(item => `
-            <div class="produto">
-              <div class="produto__imagem"></div>
-              <div class="produto__info">
-                <p class="titulo">${item.nome}</p>
-                <div class="variacoes">
-                  <span>${item.quantidade} unid.</span>
-                  <span>${item.tamanho}</span>
-                  <span>${item.cor}</span>
+      pedidos.forEach(pedido => {
+        const pedidoHTML = `
+          <div class="pedido__item">
+            <h3 class="perfil__texto">Pedido #${pedido.id}</h3>
+            ${pedido.itens.map(item => `
+              <div class="produto">
+                <div class="produto__imagem"></div>
+                <div class="produto__info">
+                  <p class="titulo">${item.nome}</p>
+                  <div class="variacoes">
+                    <span>${item.quantidade} unid.</span>
+                    <span>${item.tamanho}</span>
+                    <span>${item.cor}</span>
+                  </div>
+                  <p class="preco">R$${parseFloat(item.preco).toFixed(2)}</p>
                 </div>
-                <p class="preco">R$${parseFloat(item.preco).toFixed(2)}</p>
               </div>
-            </div>
-          `).join('')}
-          <label class="perfil__label">Status</label>
-          <input type="text" value="${pedido.status}" readonly />
-        </div>
-      `;
-      container.innerHTML += pedidoHTML;
-    });
-  })
-  .catch(err => console.error("Erro ao carregar pedidos:", err));
-
+            `).join('')}
+            <label class="perfil__label">Status</label>
+            <input type="text" value="${pedido.status}" readonly />
+          </div>
+        `;
+        container.innerHTML += pedidoHTML;
+      });
+    })
+    .catch(err => console.error("Erro ao carregar pedidos:", err));
+});
 </script>
+
     <script src="../js/modo-claro-escuro.js"></script>
     <script src="../js/perfil.js"></script>
   </body>
