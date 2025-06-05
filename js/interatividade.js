@@ -311,3 +311,71 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("resize", initSwipers);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnMenos = document.querySelector('.btn-menos');
+    const btnMais = document.querySelector('.btn-mais');
+    const inputQuantidade = document.querySelector('.input__center');
+    
+    if (!btnMenos || !btnMais || !inputQuantidade) {
+        console.error('Elementos de quantidade não encontrados');
+        return;
+    }
+    
+    function atualizarQuantidade(novaQuantidade) {
+        novaQuantidade = Math.max(1, novaQuantidade);
+        inputQuantidade.value = novaQuantidade;
+        btnMenos.disabled = novaQuantidade <= 1;
+        btnMenos.style.opacity = novaQuantidade <= 1 ? '0.5' : '1';
+        console.log('Quantidade atualizada:', novaQuantidade);
+    }
+    
+    btnMenos.addEventListener('click', function() {
+        const quantidadeAtual = parseInt(inputQuantidade.value, 10);
+        if (quantidadeAtual > 1) {
+            atualizarQuantidade(quantidadeAtual - 1);
+        }
+    });
+    
+    btnMais.addEventListener('click', function() {
+        const quantidadeAtual = parseInt(inputQuantidade.value, 10);
+        atualizarQuantidade(quantidadeAtual + 1);
+    });
+    
+    atualizarQuantidade(parseInt(inputQuantidade.value, 10));
+    
+    inputQuantidade.addEventListener('keydown', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    
+    const btnAdicionar = document.querySelector('.btn-adicionar');
+    if (btnAdicionar) {
+        btnAdicionar.addEventListener('click', function() {
+            const quantidade = parseInt(inputQuantidade.value, 10);
+            
+            let tamanho = null;
+            const tamanhoSelecionado = document.querySelector('.tamanho-item.selecionado');
+            if (tamanhoSelecionado) {
+                tamanho = tamanhoSelecionado.textContent;
+            }
+            
+            const nomeProduto = document.querySelector('.produto__descricao').textContent;
+            const precoProduto = document.querySelector('.preco__novo-produto').textContent;
+            
+            const produto = {
+                nome: nomeProduto,
+                preco: precoProduto,
+                quantidade: quantidade,
+                tamanho: tamanho
+            };
+            
+            console.log('Produto adicionado ao carrinho:', produto);
+            
+            const event = new CustomEvent('produtoAdicionado', { detail: produto });
+            document.dispatchEvent(event);
+            
+            alert(`${quantidade}x ${nomeProduto} ${tamanho ? `(Tamanho: ${tamanho})` : ''} adicionado ao carrinho!`);
+        });
+    }
+});
