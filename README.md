@@ -26,4 +26,12 @@ Fui responsável pelas seguintes partes do desenvolvimento:
 ---
 
 
-![image](https://github.com/user-attachments/assets/01d4318c-56a8-4299-9930-a015f208dfd3)
+## 🖼️ Capturas de tela
+
+> Abaixo algumas imagens do projeto em funcionamento:
+![image](https://github.com/user-attachments/assets/459859a4-22e9-4d75-b480-e7a10018193b)
+![image](https://github.com/user-attachments/assets/f8f8fa8e-ac3f-40e4-b320-4c629532b868)
+![image](https://github.com/user-attachments/assets/ab6a3b69-1df3-48cf-9832-527e9886e1cc)
+![image](https://github.com/user-attachments/assets/bd517c27-bd73-40a8-9211-b898001e2a56)
+![image](https://github.com/user-attachments/assets/2813134d-1e7f-4305-a9d5-fec803f3eaae)
+
