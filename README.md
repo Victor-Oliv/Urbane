@@ -35,3 +35,7 @@ Fui responsável pelas seguintes partes do desenvolvimento:
 ![image](https://github.com/user-attachments/assets/bd517c27-bd73-40a8-9211-b898001e2a56)
 ![image](https://github.com/user-attachments/assets/2813134d-1e7f-4305-a9d5-fec803f3eaae)
 
+Clone o repositório e abra os arquivos `.html` no seu navegador:
+
+```bash
+git clone https://github.com/Victor-Oliv/Urbane
